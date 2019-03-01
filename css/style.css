@@ -151,6 +151,10 @@ a:visited {
   animation-delay: 0.4s;
 }
 
+.section--side-projects {
+  background-color: rgb(249,249,249);
+}
+
 .work-item {
   margin: 16px 0;
   padding: 20px 30px;
