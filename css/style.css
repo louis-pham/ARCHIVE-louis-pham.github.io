@@ -160,7 +160,7 @@ a:visited {
   padding: 20px 30px;
   border-left: #cdd6ff solid 5px;
   background: white;
-  box-shadow: #c3c3c3 1px 1px 1px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px 0;
   border-radius: 2px;
 }
 
@@ -228,3 +228,74 @@ a:visited {
     display: grid;
   }
 } */
+
+.night-mode-toggle {
+  cursor: pointer;
+  position: fixed;
+  left: 10px;
+  top: 17px;
+  z-index: 10;
+}
+
+.night-mode {
+  color: white;
+  background-color: black;
+}
+
+.night-mode .intro {
+  background-color: black;
+
+}
+
+.night-mode h2 {
+  color: rgb(179,179,179);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.night-mode h5 {
+  color: rgb(196,196,196);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.night-mode a {
+  color: rgb(162, 208, 251);
+}
+
+.night-mode a:visited {
+  color: rgb(241, 188, 234);
+}
+
+.night-mode .name-container {
+  border-color: #2e3d82;
+}
+
+.night-mode .social-media a {
+  color: rgb(161,161,161);
+  color: rgba(255, 255, 255, 0.63);
+}
+
+.night-mode .section--work-experience {
+  background-color: rgb(33, 33, 33);
+}
+
+.night-mode .work-item {
+  background-color: rgb(58, 58, 58);
+  border-color: #2e3d82;
+}
+
+.night-mode .reflection {
+  color: rgb(176,176,176);
+  color: rgba(232, 232, 232, 0.68);
+}
+
+.night-mode .img-container {
+  border-color: black;
+}
+
+.night-mode .section--side-projects {
+  background-color: rgb(41, 41, 41);
+}
+
+.night-mode footer {
+  background-color: black;
+}
