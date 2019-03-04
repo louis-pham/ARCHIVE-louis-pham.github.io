@@ -4,6 +4,8 @@ if (!localStorage.getItem("night-mode")) {
 let nightModeOn = localStorage.getItem("night-mode") === "false" ? false : true;
 
 $(document).ready(() => {
+  let lastScrollTop = 0;
+  let lastScrollDirection;
   nightModeToggle();
   // get copyright year
   let currentYear = new Date().getFullYear();
@@ -26,6 +28,30 @@ $(document).ready(() => {
     localStorage.setItem("night-mode", nightModeOn);
     nightModeToggle();
   });
+
+  $(window).scroll((event) => {
+    let st = $(this).scrollTop();
+    let scrollDirection;
+    if (st > lastScrollTop){
+        scrollDirection = "down";
+        if (scrollDirection !== lastScrollDirection) {
+          $("#night-mode-toggle").removeClass("nightModeFadeInRight");
+          $("#night-mode-toggle").addClass("nightModeFadeOutRight");
+        }
+    } else if (st == lastScrollTop) {
+       //do nothing
+       //In IE this is an important condition because there seems to be some instances where the last scrollTop is equal to the new one
+    } else {
+      scrollDirection = "up";
+      if (scrollDirection !== lastScrollDirection) {
+        $("#night-mode-toggle").removeClass("nightModeFadeOutRight");
+        $("#night-mode-toggle").addClass("nightModeFadeInRight");
+      }
+    }
+    lastScrollTop = st;
+    lastScrollDirection = scrollDirection;
+  });
+
 });
 
 function nightModeToggle() {
