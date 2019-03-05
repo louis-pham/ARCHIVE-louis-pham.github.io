@@ -3,7 +3,7 @@ if (!localStorage.getItem("night-mode")) {
 }
 let nightModeOn = localStorage.getItem("night-mode") === "false" ? false : true;
 
-$(document).ready(() => {
+$( document ).ready(function() {
   let lastScrollTop = 0;
   let lastScrollDirection;
   nightModeToggle();
@@ -18,18 +18,18 @@ $(document).ready(() => {
     const fadeDirection =  (i % 2 == 0 ? "fadeInLeft" : "fadeInRight")
     workItem.css("opacity", 0);
     workItem.waypoint(
-      () => workItem.addClass("animated " + fadeDirection),
+      function () { workItem.addClass("animated " + fadeDirection); },
       { offset: "75%" } // the larger the offset the earlier the section will appear
     );
   }
 
-  $("#night-mode-toggle").click(() => {
+  $("#night-mode-toggle").click(function () {
     nightModeOn = !nightModeOn;
     localStorage.setItem("night-mode", nightModeOn);
     nightModeToggle();
   });
 
-  $(window).scroll((event) => {
+  $(window).scroll(function(event) {
     let st = $(this).scrollTop();
     let scrollDirection;
     if (st > lastScrollTop){
