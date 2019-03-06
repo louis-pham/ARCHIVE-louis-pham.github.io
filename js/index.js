@@ -3,7 +3,9 @@ if (!localStorage.getItem("night-mode")) {
 }
 let nightModeOn = localStorage.getItem("night-mode") === "false" ? false : true;
 
-$(document).ready(() => {
+$( document ).ready(function() {
+  let lastScrollTop = 0;
+  let lastScrollDirection;
   nightModeToggle();
   // get copyright year
   let currentYear = new Date().getFullYear();
@@ -16,15 +18,38 @@ $(document).ready(() => {
     const fadeDirection =  (i % 2 == 0 ? "fadeInLeft" : "fadeInRight")
     workItem.css("opacity", 0);
     workItem.waypoint(
-      () => workItem.addClass("animated " + fadeDirection),
+      function () { workItem.addClass("animated " + fadeDirection); },
       { offset: "75%" } // the larger the offset the earlier the section will appear
     );
   }
 
-  $("#night-mode-toggle").click(() => {
+  $("#night-mode-toggle").click(function () {
     nightModeOn = !nightModeOn;
     localStorage.setItem("night-mode", nightModeOn);
     nightModeToggle();
+  });
+
+  $(window).scroll(function(event) {
+    let st = $(this).scrollTop();
+    let scrollDirection;
+    if (st > lastScrollTop){
+        scrollDirection = "down";
+        if (scrollDirection !== lastScrollDirection) {
+          $("#night-mode-toggle").removeClass("nightModeFadeInRight");
+          $("#night-mode-toggle").addClass("nightModeFadeOutRight");
+        }
+    } else if (st == lastScrollTop) {
+       //do nothing
+       //In IE this is an important condition because there seems to be some instances where the last scrollTop is equal to the new one
+    } else {
+      scrollDirection = "up";
+      if (scrollDirection !== lastScrollDirection) {
+        $("#night-mode-toggle").removeClass("nightModeFadeOutRight");
+        $("#night-mode-toggle").addClass("nightModeFadeInRight");
+      }
+    }
+    lastScrollTop = st;
+    lastScrollDirection = scrollDirection;
   });
 });
 

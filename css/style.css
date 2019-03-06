@@ -232,9 +232,10 @@ a:visited {
 .night-mode-toggle {
   cursor: pointer;
   position: fixed;
-  left: 10px;
+  right: 10px;
   top: 17px;
   z-index: 10;
+  /* opacity: 0.5; */
 }
 
 .night-mode {
@@ -298,4 +299,34 @@ a:visited {
 
 .night-mode footer {
   background-color: black;
+}
+
+.nightModeFadeOutRight {
+  animation-name: nightModeFadeOutRight;
+}
+
+.nightModeFadeInRight {
+  animation-name: nightModeFadeInRight;
+}
+
+/* animation override -- final opacity is 0.5 rather than 1 */
+@keyframes nightModeFadeOutRight {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(100%,0,0);
+  }
+}
+
+@keyframes nightModeFadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%,0,0);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateZ(0);
+  }
 }
