@@ -86,7 +86,6 @@ a:visited {
 .container {
   margin-left: auto;
   margin-right: auto;
-  /* box-shadow: 0 1px 4px 0 #212121; */
 }
 .intro {
   padding: 60px 20px 40px 20px;
@@ -141,7 +140,6 @@ a:visited {
 
 .section {
   padding: 20px 20px 40px 20px;
-  /* background-color: rgb(243,243,243); */
   padding-left: 5vw;
   padding-right: 5vw;
 }
@@ -221,112 +219,4 @@ a:visited {
   h3 { font-size: 40px; }
   h4 { font-size: 25px; }
   h5 { font-size: 18px; }
-}
-
-/* @supports (display: grid) {
-  .container {
-    display: grid;
-  }
-} */
-
-.night-mode-toggle {
-  cursor: pointer;
-  position: fixed;
-  right: 10px;
-  top: 17px;
-  z-index: 10;
-  /* opacity: 0.5; */
-}
-
-.night-mode {
-  color: white;
-  background-color: black;
-}
-
-.night-mode .intro {
-  background-color: black;
-
-}
-
-.night-mode h2 {
-  color: rgb(179,179,179);
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.night-mode h5 {
-  color: rgb(196,196,196);
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.night-mode a {
-  color: rgb(162, 208, 251);
-}
-
-.night-mode a:visited {
-  color: rgb(241, 188, 234);
-}
-
-.night-mode .name-container {
-  border-color: #2e3d82;
-}
-
-.night-mode .social-media a {
-  color: rgb(161,161,161);
-  color: rgba(255, 255, 255, 0.63);
-}
-
-.night-mode .section--work-experience {
-  background-color: rgb(33, 33, 33);
-}
-
-.night-mode .work-item {
-  background-color: rgb(58, 58, 58);
-  border-color: #2e3d82;
-}
-
-.night-mode .reflection {
-  color: rgb(176,176,176);
-  color: rgba(232, 232, 232, 0.68);
-}
-
-.night-mode .img-container {
-  border-color: black;
-}
-
-.night-mode .section--side-projects {
-  background-color: rgb(41, 41, 41);
-}
-
-.night-mode footer {
-  background-color: black;
-}
-
-.nightModeFadeOutRight {
-  animation-name: nightModeFadeOutRight;
-}
-
-.nightModeFadeInRight {
-  animation-name: nightModeFadeInRight;
-}
-
-/* animation override -- final opacity is 0.5 rather than 1 */
-@keyframes nightModeFadeOutRight {
-  0% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-    transform: translate3d(100%,0,0);
-  }
-}
-
-@keyframes nightModeFadeInRight {
-  0% {
-    opacity: 0;
-    transform: translate3d(100%,0,0);
-  }
-  100% {
-    opacity: 0.5;
-    transform: translateZ(0);
-  }
 }

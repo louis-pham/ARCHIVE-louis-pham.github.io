@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/nightmode.css" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Nunito|Open+Sans|Raleway:800" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -37,7 +38,7 @@
         </p>
         <div id="description" class="description animated fadeIn">
           <p>
-            While most of my previous work has been focused on front-end development, I also have experience in back-end development (using PHP, Java), along with a short stint in scientific computing.
+            While most of my previous work has been focused on front-end development, I also have experience in back-end development (using PHP, Java), along with a short stint in scientific computing and research.
           </p>
           <p>
              I am constantly trying to learn new things and am dedicated to the task at hand. Using newly learned tools and strategies to uncover innovative solutions is always satisfying to me, and I also just enjoy creating things.
@@ -72,16 +73,36 @@
             <img src="images\cita-logo.png">
           </div>
           <p>
-            This started off initially as a final-year research course but I was invited by my supervisor to continue with the research over the summer.
+            I worked on developing the software needed to investigate the effects of weak gravitational lensing in the Cosmic Infrared Background (CIB) together with my research group. During my time here I:
           </p>
+          <ul>
+            <li>
+              <a href="https://github.com/louis-pham/modified_lenspix">Modified the simulation tool LensPix</a> to read external map files and write the outputs
+            </li>
+            <li>
+              Created Python wrappers and power spectrum plots of the simulations
+            </li>
+            <li>
+              Debugged the modifications and simulations through comparisons with theoretical expectations
+            </li>
+            <li>
+              Wrote documentation for the code along with a final report on the project as a whole
+            </li>
+            <li>
+              Created and gave presentations on the research to fellow researchers and colleagues
+            </li>
+          </ul>
           <p>
-            I was tasked with taking the simulation tool <a href="https://cosmologist.info/lenspix/">LensPix</a> and making <a href="https://github.com/louis-pham/modified_lenspix">modifications</a> so it can read/write files,  creating Python wrappers, adding helper methods to debug/test the modifications and outputs, and writing documentation. These changes allowed my research group to test simulations of the evolution of the universe for the goal of studying the effects of weak gravitational lensing in the Cosmic Infrared Background.
+             By making these changes, we were able to run weak lensing simulations using our own custom maps of the CIB and gravitational maps. With the appropriate maps, the tool can also be used to simulate weak lensing in other background such as the Cosmic Microwave Background (CMB).
           </p>
           <p class="reflection">
             This was my first venture into the world of theoretical astrophysics research - another experience of many firsts, but nonetheless enlightening. It was exciting and fulfilling to interact with people of various research topics, disciplines, and expertise, even though nine times out of ten I was terribly ill-equipped to understand exactly what they were doing.
           </p>
           <p class="reflection">
-            It was quite daunting having to poke around some alien (haha) Fortran code, but at least I got to use a <a href="https://www.scinethpc.ca">supercomputer</a> for the first time! The sizes of some data sets were also mind-boggling.
+            It was quite daunting having to poke around some alien (haha) Fortran code, but at least I got to use a supercomputer for the first time - necessary considering how big the maps could get.
+          </p>
+          <p class="reflection">
+            This started off initially as a final-year research course but I was invited by my supervisor to continue with the research over the summer.
           </p>
         </div>
 
