@@ -32,7 +32,7 @@ $( document ).ready(function() {
   $(window).scroll(function(event) {
     let st = $(this).scrollTop();
     let scrollDirection;
-    if (st >= 0) { // prevents funny business with negative scrollTop on iOS touch screen
+    if (st >= 0) { // prevents funny business with negative scrollTop on iOS touch screen when at the top of the page and pulling down and letting the page bounce back up, it would trigger a "down" scroll and thus causing the toggle icon to hide
       if (st > lastScrollTop){
           scrollDirection = "down";
           if (scrollDirection !== lastScrollDirection) {
