@@ -32,27 +32,26 @@ $( document ).ready(function() {
   $(window).scroll(function(event) {
     let st = $(this).scrollTop();
     let scrollDirection;
-    if (st <= 0) {
-      return;
-    }
-    if (st > lastScrollTop){
-        scrollDirection = "down";
+    if (st >= 0) { // prevents funny business with negative scrollTop on iOS touch screen
+      if (st > lastScrollTop){
+          scrollDirection = "down";
+          if (scrollDirection !== lastScrollDirection) {
+            $("#night-mode-toggle").removeClass("nightModeFadeInRight");
+            $("#night-mode-toggle").addClass("nightModeFadeOutRight");
+          }
+      } else if (st == lastScrollTop) {
+         //do nothing
+         //In IE this is an important condition because there seems to be some instances where the last scrollTop is equal to the new one
+      } else {
+        scrollDirection = "up";
         if (scrollDirection !== lastScrollDirection) {
-          $("#night-mode-toggle").removeClass("nightModeFadeInRight");
-          $("#night-mode-toggle").addClass("nightModeFadeOutRight");
+          $("#night-mode-toggle").removeClass("nightModeFadeOutRight");
+          $("#night-mode-toggle").addClass("nightModeFadeInRight");
         }
-    } else if (st == lastScrollTop) {
-       //do nothing
-       //In IE this is an important condition because there seems to be some instances where the last scrollTop is equal to the new one
-    } else {
-      scrollDirection = "up";
-      if (scrollDirection !== lastScrollDirection) {
-        $("#night-mode-toggle").removeClass("nightModeFadeOutRight");
-        $("#night-mode-toggle").addClass("nightModeFadeInRight");
       }
+      lastScrollTop = st;
+      lastScrollDirection = scrollDirection;
     }
-    lastScrollTop = st;
-    lastScrollDirection = scrollDirection;
   });
 });
 
