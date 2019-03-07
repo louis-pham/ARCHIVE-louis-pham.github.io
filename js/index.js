@@ -32,6 +32,9 @@ $( document ).ready(function() {
   $(window).scroll(function(event) {
     let st = $(this).scrollTop();
     let scrollDirection;
+    if (st <= 0) {
+      return;
+    }
     if (st > lastScrollTop){
         scrollDirection = "down";
         if (scrollDirection !== lastScrollDirection) {
