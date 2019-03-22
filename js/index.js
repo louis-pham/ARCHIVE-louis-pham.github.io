@@ -4,6 +4,8 @@ if (!localStorage.getItem("night-mode")) {
 let nightModeOn = localStorage.getItem("night-mode") === "false" ? false : true;
 
 $( document ).ready(function() {
+  const expireTime = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+  let currentTime = Date.now();
   let lastScrollTop = 0;
   let lastScrollDirection;
   nightModeToggle();
@@ -53,6 +55,22 @@ $( document ).ready(function() {
       lastScrollDirection = scrollDirection;
     }
   });
+
+  let notificationSeen = JSON.parse(localStorage.getItem("notification_seen"));
+  if (!notificationSeen || notificationSeen.expires < currentTime) {
+    new Noty({
+      text: "I've recently changed phone numbers - check my resume for the update!",
+      layout: "topLeft",
+      theme: "metroui",
+      timeout: 5000,
+      type: "alert",
+    }).show();
+    localStorage.setItem("notification_seen", JSON.stringify(
+      {
+        expires: currentTime + expireTime,
+      }
+    ));
+  }
 });
 
 function nightModeToggle() {
