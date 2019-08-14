@@ -386,10 +386,10 @@ footer {
   }
 
   .radargraph-holder {
-    left: -10em;
-    top: -1em;
-    width: 22em;
-    height: 21em;
+    left: -23em;
+    top: 7em;
+    width: 39em;
+    height: 38em;
   }
 
   .fightstick-holder {
@@ -404,7 +404,7 @@ footer {
 
 @media screen and (min-width: 1100px) {
   section {
-    padding: 5em 12em;
+    padding: 5em 13em;
   }
 
   .intro__earth {
@@ -422,7 +422,7 @@ footer {
   }
 
   .radargraph-holder {
-    left: -23em;
+    left: -22em;
     top: 3em;
     width: 44em;
     height: 42em;
@@ -468,5 +468,21 @@ footer {
     .work-item__technologies > h5 {
       margin-top: 0;
     }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  section {
+    padding: 5em 20em;
+  }
+
+  .radargraph-holder {
+    left: -17em;
+  }
+
+  .fightstick-holder {
+    right: 3em;
+    width: 29em;
+    height: 15.75em;
   }
 }
