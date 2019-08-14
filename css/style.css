@@ -87,6 +87,7 @@ section:nth-child(odd) {
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .intro__moon {
@@ -96,8 +97,10 @@ section:nth-child(odd) {
   height: 65vh;
   width: 65vh;
   background: url(../images/moon.svg) top left no-repeat;
+  -webkit-animation: fadeInUp 2s ease-out, float 7s ease-in-out 2s infinite;
+  -moz-animation: fadeInUp 2s ease-out, float 7s ease-in-out 2s infinite;
   animation: fadeInUp 2s ease-out, float 7s ease-in-out 2s infinite;
-  transition: all 1s ease-in-out;
+  transition: bottom,right,height,width 1s ease-in-out;
 }
 
 .intro__earth {
@@ -107,8 +110,10 @@ section:nth-child(odd) {
   height: 30vh;
   width: 30vh;
   background: url(../images/earth.svg) top left no-repeat;
+  -webkit-animation: rotateInDownLeft 1.5s ease-out, rotate 60s linear 1.5s infinite;
+  -moz-animation: rotateInDownLeft 1.5s ease-out, rotate 60s linear 1.5s infinite;
   animation: rotateInDownLeft 1.5s ease-out, rotate 60s linear 1.5s infinite;
-  transition: all 1s ease-in-out;
+  transition: bottom,right,height,width 1s ease-in-out;
 }
 
 .intro__name {
@@ -149,17 +154,23 @@ section:nth-child(odd) {
 }
 
 .project-item {
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: row wrap;
 }
 
 .project-item > * {
+  -webkit-flex: 1 100%;
+  -ms-flex: 1 100%;
   flex: 1 100%;
 }
 
 .project-item__image {
   margin: auto;
   border-radius: 6px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   width: 38%;
   max-width: 300px;
@@ -305,15 +316,34 @@ footer {
   background-color: #0c0015;
 }
 
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 
 @keyframes rotate {
   100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes float {
+  50% {
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
   }
 }
 
 @keyframes float {
   50% {
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
     transform: translateY(20px);
   }
 }
@@ -348,11 +378,15 @@ footer {
   }
 
   .project-item__image {
+    -webkit-flex: 1 0 0;
+    -ms-flex: 1 0 0;
     flex: 1 0 0;
     margin-right: 25px;
   }
 
   .project-item__description {
+    -webkit-flex: 1 0 0;
+    -ms-flex: 1 0 0;
     flex: 1 0 0;
   }
 
@@ -435,6 +469,7 @@ footer {
 
   @supports (display: grid) {
     .work-item {
+      display: -ms-grid;
       display: grid;
       grid-template-columns: 4fr 3fr;
       grid-template-rows: repeat(4, auto);
