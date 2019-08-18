@@ -70,7 +70,7 @@ section:nth-child(even) {
   background-color: rgba(154, 154, 154, 0.1);
 }
 
-section:nth-child(odd) {
+section:nth-child(odd):not(:first-child) {
   background-color: rgb(252, 252, 252);
   background-color: rgba(230, 230, 230, 0.1);
 }
@@ -83,7 +83,7 @@ section:nth-child(odd) {
   overflow: hidden;
   color: white;
   background-color: #0c0015;
-  background: url(../images/space.svg);
+  background: url(../images/stars.svg), #0c0015;
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
