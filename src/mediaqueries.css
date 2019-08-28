@@ -159,8 +159,8 @@
 }
 
 @media screen and (min-width: 1300px) {
-  section {
-    padding: 5em 20em;
+  :root {
+    --horizontal-gutter: 20em;
   }
 
   .radargraph-holder {
