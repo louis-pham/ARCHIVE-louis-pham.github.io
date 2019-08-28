@@ -1,3 +1,8 @@
+:root {
+  --vertical-gutter: 2em;
+  --horizontal-gutter: 2em;
+}
+
 html {
   margin: 0;
 }
@@ -63,8 +68,10 @@ ul {
 }
 
 section {
-  padding: 2em;
+  padding: var(--vertical-gutter) var(--horizontal-gutter);
+  /* grid-column: 2 / -2; */
 }
+
 section:nth-child(even) {
   background-color: rgb(245, 245, 245);
   background-color: rgba(154, 154, 154, 0.1);
@@ -75,9 +82,40 @@ section:nth-child(odd):not(:first-child) {
   background-color: rgba(230, 230, 230, 0.1);
 }
 
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+fieldset input,
+fieldset textarea {
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 3px 7px;
+  background-color: #dadada;
+  font-size: 1.2em;
+}
+
+fieldset textarea {
+  resize: vertical;
+}
+
+footer {
+  padding: 10px 30px;
+  min-height: 35px;
+  color: white;
+  text-align: right;
+  background-color: #0c0015;
+}
+
 .intro {
   position: relative;
-  padding: 0 0.8em;
   min-height: 400px;
   height: 99vh;
   overflow: hidden;
@@ -137,7 +175,44 @@ section:nth-child(odd):not(:first-child) {
   animation-delay: 0.7s;
 }
 
+.experience {
+  padding: 0;
+  display: grid;
+  grid-template-columns: var(--horizontal-gutter) 1fr var(--horizontal-gutter);
+  grid-template-rows: 12em 4em auto;
+  grid-template-areas:
+  ". header ."
+  ". . ."
+   "work-items work-items work-items";
+}
+
+.experience > h2 {
+  grid-area: header;
+  align-self: end;
+  display: block;
+  margin: 0;
+}
+
+.work-items {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  grid-area: work-items;
+  display: grid;
+  grid-gap: calc(var(--horizontal-gutter) / 2);
+  grid-template-columns:
+  calc(var(--horizontal-gutter) / 2)
+  repeat(3, calc(100% - 2 * var(--horizontal-gutter)))
+  calc(var(--horizontal-gutter) / 2);
+  grid-template-rows: minmax(150px, 1fr);
+}
+
+.work-items::before,
+.work-items::after {
+  content: "";
+}
+
 .work-item {
+  scroll-snap-align: center;
   margin: 16px 0;
   padding: 20px 30px;
   border-left: #cdd6ff solid 5px;
@@ -151,6 +226,14 @@ section:nth-child(odd):not(:first-child) {
   font-weight: normal;
   color: #6b6b6b;
   font-style: italic;
+}
+
+.work-item__summary {
+  display: none;
+}
+
+.work-item__description {
+  display: none;
 }
 
 .project-item {
@@ -281,243 +364,5 @@ section:nth-child(odd):not(:first-child) {
   background: -webkit-linear-gradient(66deg, rgba(255,192,130,1) 0%, rgba(232,199,234,1) 98%, rgba(227,200,255,1) 100%);
   background: -o-linear-gradient(66deg, rgba(255,192,130,1) 0%, rgba(232,199,234,1) 98%, rgba(227,200,255,1) 100%);
   background: linear-gradient(156deg, rgba(255,192,130,1) 0%, rgba(232,199,234,1) 98%, rgba(227,200,255,1) 100%);
-  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.5);
-}
-
-fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-
-fieldset input,
-fieldset textarea {
-  display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  border: none;
-  width: 100%;
-  margin-bottom: 5px;
-  padding: 3px 7px;
-  background-color: #dadada;
-  font-size: 1.2em;
-}
-
-fieldset textarea {
-  resize: vertical;
-}
-
-footer {
-  padding: 10px 30px;
-  min-height: 35px;
-  color: white;
-  text-align: right;
-  background-color: #0c0015;
-}
-
-@-webkit-keyframes rotate {
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate {
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes float {
-  50% {
-    -webkit-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    transform: translateY(20px);
-  }
-}
-
-@keyframes float {
-  50% {
-    -webkit-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    transform: translateY(20px);
-  }
-}
-
-@media screen and (min-width: 600px) {
-  section {
-    padding: 3em 4em;
-  }
-
-  .intro__earth {
-    top: -2em;
-    left: -4em;
-    height: 32vh;
-    width: 32vh;
-  }
-
-  .intro__moon {
-    bottom: -8em;
-    right: -8em;
-    height: 70vh;
-    width: 70vh;
-  }
-
-  .work-item {
-    margin: 40px 0;
-    padding: 3em 4em;
-  }
-
-  .project-item {
-    align-items: center;
-    margin-bottom: 30px;
-  }
-
-  .project-item__image {
-    -webkit-flex: 1 0 0;
-    -ms-flex: 1 0 0;
-    flex: 1 0 0;
-    margin-right: 25px;
-  }
-
-  .project-item__description {
-    -webkit-flex: 1 0 0;
-    -ms-flex: 1 0 0;
-    flex: 1 0 0;
-  }
-
-  .radargraph-holder {
-    width: 19em;
-    height: 18em;
-  }
-
-  .social-media {
-    font-size: 1.9em;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  section {
-    padding: 5em 8em;
-  }
-
-  .intro__earth {
-    height: 34vh;
-    width: 34vh;
-  }
-
-  .intro__moon {
-    height: 75vh;
-    width: 75vh;
-  }
-
-  .work-item {
-    padding: 4em 5em;
-  }
-
-  .radargraph-holder {
-    left: -23em;
-    top: 7em;
-    width: 39em;
-    height: 38em;
-  }
-
-  .fightstick-holder {
-    width: 25em;
-    height: 13.75em;
-  }
-
-  .social-media {
-    font-size: 2.8em;
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  section {
-    padding: 5em 13em;
-  }
-
-  .intro__earth {
-    top: -1em;
-    left: -1em;
-    height: 40vh;
-    width: 40vh;
-  }
-
-  .intro__moon {
-    bottom: -12em;
-    right: -10em;
-    height: 80vh;
-    width: 80vh;
-  }
-
-  .radargraph-holder {
-    left: -22em;
-    top: 3em;
-    width: 44em;
-    height: 42em;
-  }
-
-  .fightstick-holder {
-    right: 1em;
-    top: 1em;
-  }
-
-  @supports (display: grid) {
-    .work-item {
-      display: -ms-grid;
-      display: grid;
-      grid-template-columns: 4fr 3fr;
-      grid-template-rows: repeat(4, auto);
-      grid-template-areas:
-      "company company"
-      "position position"
-      "summary summary"
-      "description technologies"
-    }
-
-    .work-item > h3 {
-      grid-area: company;
-    }
-
-    .work-item > h4 {
-      grid-area: position;
-    }
-
-    .work-item__summary {
-      grid-area: summary;
-    }
-
-    .work-item__description {
-      grid-area: description;
-    }
-
-    .work-item__technologies {
-      grid-area: technologies;
-    }
-
-    .work-item__technologies > h5 {
-      margin-top: 0;
-    }
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  section {
-    padding: 5em 20em;
-  }
-
-  .radargraph-holder {
-    left: -17em;
-  }
-
-  .fightstick-holder {
-    right: 3em;
-    width: 29em;
-    height: 15.75em;
-  }
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
 }

@@ -19,12 +19,15 @@
 
     <link href="https://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/keyframes.css" />
+    <link rel="stylesheet" type="text/css" href="css/mediaqueries.css" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   </head>
 
   <body>
+    <div class="container">
       <section class="intro">
         <div class="intro__earth" aria-hidden="true"></div>
         <div class="intro__moon" aria-hidden="true"></div>
@@ -33,172 +36,174 @@
       </section>
       <section class="experience">
         <h2>Experience</h2>
-        <div class="work-item">
-          <h3>CITA Summer Undergraduate Research Program</h3>
-          <h4>Researcher <small>| October 2016 - August 2017</small></h4>
-          <div class="work-item__summary">
-            <p>
-              It was my responsibility to develop the software and tools for the rest of the team to investigate weak gravitational lensing in the Cosmic Infrared Background.
-            </p>
-          </div>
-          <div class="work-item__description">
-            <ul>
-              <li>
-                <b>Responsibilities</b>
-                <ul>
-                  <li>
-                    Modified LensPix to read and write external simulation map files
-                  </li>
-                  <li>
-                    Created Python wrappers and scripts to analyze maps, along with writing documentation
-                  </li>
-                  <li>
-                    Created presentations and reports for fellow researchers and colleagues within the department
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <b>Team Size:</b> 5
-              </li>
-            </ul>
-          </div>
-          <div class="work-item__technologies">
-            <h5>Technologies used</h5>
-            <div class="skill">
-              <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/fortran90.svg" alt=""/>
-              <span class="skill__label">Fortran 90</span>
+        <div class="work-items">
+          <div class="work-item">
+            <h3>CITA Summer Undergraduate Research Program</h3>
+            <h4>Researcher <small>| October 2016 - August 2017</small></h4>
+            <div class="work-item__summary">
+              <p>
+                It was my responsibility to develop the software and tools for the rest of the team to investigate weak gravitational lensing in the Cosmic Infrared Background.
+              </p>
             </div>
-            <div class="skill">
-              <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/python.svg" alt=""/>
-              <span class="skill__label">Python</span>
+            <div class="work-item__description">
+              <ul>
+                <li>
+                  <b>Responsibilities</b>
+                  <ul>
+                    <li>
+                      Modified LensPix to read and write external simulation map files
+                    </li>
+                    <li>
+                      Created Python wrappers and scripts to analyze maps, along with writing documentation
+                    </li>
+                    <li>
+                      Created presentations and reports for fellow researchers and colleagues within the department
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Team Size:</b> 5
+                </li>
+              </ul>
             </div>
-          </div>
-        </div>
-        <div class="work-item">
-          <h3>University of Toronto Faculty of Kinesiology & Physical Education</h3>
-          <h4>Student Developer <small>| October 2015 - Dec 2016</small></h4>
-          <div class="work-item__summary">
-            <p>
-              I was involved in a variety of projects with the IT department of the KPE faculty. This included several web projects (internal and public-facing) and making changes to the electronic medical record software used by the faculty clinic.
-            </p>
-          </div>
-          <div class="work-item__description">
-            <ul>
-              <li>
-                <b>Projects</b>
-                <ul>
-                  <li>
-                    <a title="Go to UofT's Sports Hall of Fame" href="https://halloffame.utoronto.ca/">Sports Hall of Fame</a>
-                  </li>
-                  <li>
-                    internal scheduling tools
-                  </li>
-                  <li>
-                    schedule and wayfinder displays for the campus' athletic facilities
-                  </li>
-                  <li>
-                    new faculty website
-                  </li>
-                  <li>
-                    EMR electronic health forms + patient reports
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <b>Team Size:</b> 3
-              </li>
-            </ul>
-          </div>
-          <div class="work-item__technologies">
-            <h5>Technologies used</h5>
-            <div class="skill">
-              <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/html5.svg" alt=""/>
-              <span class="skill__label">HTML5</span>
-            </div>
-            <div class="skill">
-              <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/css3.svg" alt=""/>
-              <span class="skill__label">CSS3</span>
-            </div>
-            <div class="skill">
-              <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/bootstrap.svg" alt=""/>
-              <span class="skill__label">Bootstrap</span>
-            </div>
-            <div class="skill">
-              <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/javascript.svg" alt=""/>
-              <span class="skill__label">JavaScript</span>
-            </div>
-            <div class="skill">
-              <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/jquery.svg" alt=""/>
-              <span class="skill__label">jQuery</span>
-            </div>
-            <div class="skill">
-              <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/php.svg" alt=""/>
-              <span class="skill__label">PHP</span>
-            </div>
-            <div class="skill">
-              <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/mysql.svg" alt=""/>
-              <span class="skill__label">MySQL</span>
+            <div class="work-item__technologies">
+              <h5>Technologies used</h5>
+              <div class="skill">
+                <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/fortran90.svg" alt=""/>
+                <span class="skill__label">Fortran 90</span>
+              </div>
+              <div class="skill">
+                <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/python.svg" alt=""/>
+                <span class="skill__label">Python</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="work-item">
-          <h3>Canada Health Infoway</h3>
-          <h4>Software Developer, Co-op <small>| August 2014 - August 2015</small></h4>
-          <div class="work-item__summary">
-            <p>
-              I worked with the Clinical Systems Integration (CSI) team in developing healthcare-related software to be used by healthcare professionals across Canada.
-            </p>
+          <div class="work-item">
+            <h3>University of Toronto Faculty of Kinesiology & Physical Education</h3>
+            <h4>Student Developer <small>| October 2015 - Dec 2016</small></h4>
+            <div class="work-item__summary">
+              <p>
+                I was involved in a variety of projects with the IT department of the KPE faculty. This included several web projects (internal and public-facing) and making changes to the electronic medical record software used by the faculty clinic.
+              </p>
+            </div>
+            <div class="work-item__description">
+              <ul>
+                <li>
+                  <b>Projects</b>
+                  <ul>
+                    <li>
+                      <a title="Go to UofT's Sports Hall of Fame" href="https://halloffame.utoronto.ca/">Sports Hall of Fame</a>
+                    </li>
+                    <li>
+                      internal scheduling tools
+                    </li>
+                    <li>
+                      schedule and wayfinder displays for the campus' athletic facilities
+                    </li>
+                    <li>
+                      new faculty website
+                    </li>
+                    <li>
+                      EMR electronic health forms + patient reports
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Team Size:</b> 3
+                </li>
+              </ul>
+            </div>
+            <div class="work-item__technologies">
+              <h5>Technologies used</h5>
+              <div class="skill">
+                <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/html5.svg" alt=""/>
+                <span class="skill__label">HTML5</span>
+              </div>
+              <div class="skill">
+                <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/css3.svg" alt=""/>
+                <span class="skill__label">CSS3</span>
+              </div>
+              <div class="skill">
+                <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/bootstrap.svg" alt=""/>
+                <span class="skill__label">Bootstrap</span>
+              </div>
+              <div class="skill">
+                <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/javascript.svg" alt=""/>
+                <span class="skill__label">JavaScript</span>
+              </div>
+              <div class="skill">
+                <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/jquery.svg" alt=""/>
+                <span class="skill__label">jQuery</span>
+              </div>
+              <div class="skill">
+                <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/php.svg" alt=""/>
+                <span class="skill__label">PHP</span>
+              </div>
+              <div class="skill">
+                <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/mysql.svg" alt=""/>
+                <span class="skill__label">MySQL</span>
+              </div>
+            </div>
           </div>
-          <div class="work-item__description">
-            <ul>
-              <li>
-                <b>Projects</b>
-                <ul>
-                  <li>
-                    <a title="Go to InfoScribe" href="https://infoscribe.infoway-inforoute.ca">InfoScribe</a>
-                  </li>
-                  <li>
-                    digital mockups (<a title="Go to the Clinical Requirements digital mockup" href="https://infocentral.infoway-inforoute.ca/extra/ca/clinical-requirements/html/start.html">1</a>, <a title="Go to the Interoperability Specification digital mockup" href="https://infocentral.infoway-inforoute.ca/extra/ca/interoperability-spec/html/start.html">2</a>)
-                  </li>
-                  <li>
-                    HL7 Explorer
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <b>Team Size:</b> 5-10
-              </li>
-            </ul>
-          </div>
-          <div class="work-item__technologies">
-            <h5>Technologies used</h5>
-            <div class="skill">
-              <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/java.svg" alt=""/>
-              <span class="skill__label">Java</span>
+          <div class="work-item">
+            <h3>Canada Health Infoway</h3>
+            <h4>Software Developer, Co-op <small>| August 2014 - August 2015</small></h4>
+            <div class="work-item__summary">
+              <p>
+                I worked with the Clinical Systems Integration (CSI) team in developing healthcare-related software to be used by healthcare professionals across Canada.
+              </p>
             </div>
-            <div class="skill">
-              <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/html5.svg" alt=""/>
-              <span class="skill__label">HTML5</span>
+            <div class="work-item__description">
+              <ul>
+                <li>
+                  <b>Projects</b>
+                  <ul>
+                    <li>
+                      <a title="Go to InfoScribe" href="https://infoscribe.infoway-inforoute.ca">InfoScribe</a>
+                    </li>
+                    <li>
+                      digital mockups (<a title="Go to the Clinical Requirements digital mockup" href="https://infocentral.infoway-inforoute.ca/extra/ca/clinical-requirements/html/start.html">1</a>, <a title="Go to the Interoperability Specification digital mockup" href="https://infocentral.infoway-inforoute.ca/extra/ca/interoperability-spec/html/start.html">2</a>)
+                    </li>
+                    <li>
+                      HL7 Explorer
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Team Size:</b> 5-10
+                </li>
+              </ul>
             </div>
-            <div class="skill">
-              <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/css3.svg" alt=""/>
-              <span class="skill__label">CSS3</span>
-            </div>
-            <div class="skill">
-              <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/bootstrap.svg" alt=""/>
-              <span class="skill__label">Bootstrap</span>
-            </div>
-            <div class="skill">
-              <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/javascript.svg" alt=""/>
-              <span class="skill__label">JavaScript</span>
-            </div>
-            <div class="skill">
-              <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/jquery.svg" alt=""/>
-              <span class="skill__label">jQuery</span>
-            </div>
-            <div class="skill">
-              <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/angular.svg" alt=""/>
-              <span class="skill__label">AngularJS</span>
+            <div class="work-item__technologies">
+              <h5>Technologies used</h5>
+              <div class="skill">
+                <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/java.svg" alt=""/>
+                <span class="skill__label">Java</span>
+              </div>
+              <div class="skill">
+                <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/html5.svg" alt=""/>
+                <span class="skill__label">HTML5</span>
+              </div>
+              <div class="skill">
+                <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/css3.svg" alt=""/>
+                <span class="skill__label">CSS3</span>
+              </div>
+              <div class="skill">
+                <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/bootstrap.svg" alt=""/>
+                <span class="skill__label">Bootstrap</span>
+              </div>
+              <div class="skill">
+                <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/javascript.svg" alt=""/>
+                <span class="skill__label">JavaScript</span>
+              </div>
+              <div class="skill">
+                <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/jquery.svg" alt=""/>
+                <span class="skill__label">jQuery</span>
+              </div>
+              <div class="skill">
+                <img class="skill__icon skill__icon--xsmall" src="images/language-icons-svg/angular.svg" alt=""/>
+                <span class="skill__label">AngularJS</span>
+              </div>
             </div>
           </div>
         </div>
@@ -302,6 +307,7 @@
           </li>
         </ul>
       </section>
-    <footer><span id="copyright">©<span id="copyright-year">2019</span> Louis Pham</span></footer>
+      <footer class=""><span id="copyright">©<span id="copyright-year">2019</span> Louis Pham</span></footer>
+    </div>
   </body>
 </html>
