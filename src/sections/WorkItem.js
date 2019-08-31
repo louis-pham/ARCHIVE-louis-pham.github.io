@@ -11,13 +11,6 @@ const WorkItem = React.forwardRef((props, ref) => {
     return expanded ? "" : "hidden ";
   };
 
-  // React.useEffect(() => {
-  //   if (props.inView) {
-  //     // console.log(ref);
-  //     props.handleChange();
-  //   }
-  // }, [props.inView]);
-
   return (
     <div id={props.workItemId} className="work-item" ref={ref}>
       <span className="details-toggle" onClick={() => handleClick(!expanded)} title={(expanded ? "Hide " : "Show ") + "details"}><i className={getDetailsToggleClass()}></i></span>
@@ -41,6 +34,3 @@ const WorkItem = React.forwardRef((props, ref) => {
 });
 
 export default WorkItem;
-// export default React.forwardRef((props, ref) => <WorkItem
-//   ref={ref} {...props}
-// />);

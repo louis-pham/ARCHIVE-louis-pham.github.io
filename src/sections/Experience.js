@@ -12,8 +12,8 @@ class Experience extends React.Component {
     this.state = {
       itemInView: 0,
     }
-
-    this.workItemRefs = WORKITEMS.map((elem, i) => {
+    this.workItemsRef = React.createRef();
+    this.singleWorkItemRefs = WORKITEMS.map((elem, i) => {
       return {
         workItemId: i,
         ref: React.createRef(),
@@ -35,25 +35,28 @@ class Experience extends React.Component {
   }
 
   componentDidMount() {
-    Object.values(this.workItemRefs).forEach(item =>
+    Object.values(this.singleWorkItemRefs).forEach(item =>
       this.observer.observe(item.ref.current)
     );
   }
 
   toggleScrollButton(side) {
-    return (this.state.itemInView === 2 && side ==="R") ? " hidden" : (this.state.itemInView === 0 && side ==="L") ? " hidden" : "";
+    return (this.state.itemInView === 2 && side === "R") ? " hidden" : (this.state.itemInView === 0 && side === "L") ? " hidden" : "";
   }
 
   doScroll(side) {
     let itemToScrollTo = null;
+    let scrollByY = 0;
     if (side === "L") {
       itemToScrollTo = this.state.itemInView - 1;
     } else if (side === "R") {
       itemToScrollTo = this.state.itemInView + 1;
     }
-    console.log("itemToScrollTo: " + itemToScrollTo);
-    if (itemToScrollTo < this.workItemRefs.length && itemToScrollTo >= 0) {
-      console.log("legal scroll");
+
+    if (itemToScrollTo < this.singleWorkItemRefs.length && itemToScrollTo >= 0) {
+      scrollByY = this.singleWorkItemRefs[itemToScrollTo].ref.current.clientWidth;
+      scrollByY = side === "L" ? -scrollByY : scrollByY;
+      this.workItemsRef.current.scrollBy({top: 0, left: scrollByY, behavior: "smooth"});
     }
   }
 
@@ -65,10 +68,10 @@ class Experience extends React.Component {
         </span>
         <span className={"scroll-button scroll-button__previous" + this.toggleScrollButton("L")} onClick={() => this.doScroll("L")}><i className="fas fa-3x fa-chevron-left"></i></span>
         <span className={"scroll-button scroll-button__next" + this.toggleScrollButton("R")} onClick={() => this.doScroll("R")}><i className="fas fa-3x fa-chevron-right"></i></span>
-        <div className="work-items">
+        <div className="work-items" ref={this.workItemsRef}>
           {
             WORKITEMS.map( (workItem, i) => {
-              return <WorkItem key={i} ref={this.workItemRefs[i].ref}
+              return <WorkItem key={i} ref={this.singleWorkItemRefs[i].ref}
               workItemId={i}
               company={workItem.company}
               jobTitle={workItem.jobTitle}
