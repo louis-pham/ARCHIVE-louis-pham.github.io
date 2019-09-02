@@ -5,6 +5,7 @@ import WI2 from './work_items/WI2.jsx';
 import WI3 from './work_items/WI3.jsx';
 
 const WORKITEMS = [WI1, WI2, WI3];
+const supportsNativeSmoothScroll = 'scrollBehavior' in document.documentElement.style; //used for IE/Edge detection
 
 class Experience extends React.Component {
   constructor(props) {
@@ -45,18 +46,21 @@ class Experience extends React.Component {
   }
 
   doScroll(side) {
-    let itemToScrollTo = null;
-    let scrollByY = 0;
-    if (side === "L") {
-      itemToScrollTo = this.state.itemInView - 1;
-    } else if (side === "R") {
-      itemToScrollTo = this.state.itemInView + 1;
-    }
+    // don't bother trying to scroll in IE/Edge
+    if (supportsNativeSmoothScroll) {
+      let itemToScrollTo = null;
+      let scrollByY = 0;
+      if (side === "L") {
+        itemToScrollTo = this.state.itemInView - 1;
+      } else if (side === "R") {
+        itemToScrollTo = this.state.itemInView + 1;
+      }
 
-    if (itemToScrollTo < this.singleWorkItemRefs.length && itemToScrollTo >= 0) {
-      scrollByY = this.singleWorkItemRefs[itemToScrollTo].ref.current.clientWidth;
-      scrollByY = side === "L" ? -scrollByY : scrollByY;
-      this.workItemsRef.current.scrollBy({top: 0, left: scrollByY, behavior: "smooth"});
+      if (itemToScrollTo < this.singleWorkItemRefs.length && itemToScrollTo >= 0) {
+        scrollByY = this.singleWorkItemRefs[itemToScrollTo].ref.current.clientWidth;
+        scrollByY = side === "L" ? -scrollByY : scrollByY;
+        this.workItemsRef.current.scrollBy({top: 0, left: scrollByY, behavior: "smooth"});
+      }
     }
   }
 

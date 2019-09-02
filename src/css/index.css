@@ -1,5 +1,3 @@
-@import "~animate.css/animate.min.css";
-
 :root {
   --vertical-gutter: 2em;
   --horizontal-gutter: 2em;
@@ -138,7 +136,7 @@ footer {
 }
 
 .button:active {
-  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.6);
   background-color: #cecece;
 }
 
@@ -234,10 +232,10 @@ footer {
   repeat(3, calc(100% - 2 * var(--horizontal-gutter)))
   calc(var(--horizontal-gutter) / 2);
   grid-template-rows: minmax(150px, 1fr);
-  scrollbar-width: none; 
-  -ms-overflow-style: none;
+  scrollbar-width: none; /* hide scrollbar on FireFox */
 }
 
+/* hide scrollbar on Chrome */
 .work-items::-webkit-scrollbar {
   display: none;
 }

@@ -7,6 +7,21 @@
   }
 }
 
+/* Hide scroll buttons in IE/Edge  */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ */
+  .scroll-button {
+    display: none;
+  }
+}
+
+@supports (-ms-ime-align:auto) {
+  /* Edge */
+  .scroll-button {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 600px) {
   :root {
     --vertical-gutter: 3em;
