@@ -223,6 +223,7 @@ footer {
 
 .work-items {
   scroll-snap-type: x mandatory;
+  -ms-scroll-snap-type: mandatory;
   overflow-x: scroll;
   grid-area: work-items;
   display: grid;

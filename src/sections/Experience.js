@@ -5,7 +5,7 @@ import WI2 from './work_items/WI2.jsx';
 import WI3 from './work_items/WI3.jsx';
 
 const WORKITEMS = [WI1, WI2, WI3];
-const supportsNativeSmoothScroll = 'scrollBehavior' in document.documentElement.style; //used for IE/Edge detection
+const EDGEIE = document.documentMode || /Edge/.test(navigator.userAgent);
 
 class Experience extends React.Component {
   constructor(props) {
@@ -47,7 +47,7 @@ class Experience extends React.Component {
 
   doScroll(side) {
     // don't bother trying to scroll in IE/Edge
-    if (supportsNativeSmoothScroll) {
+    if (!EDGEIE) {
       let itemToScrollTo = null;
       let scrollByY = 0;
       if (side === "L") {
