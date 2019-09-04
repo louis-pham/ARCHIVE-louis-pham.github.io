@@ -7,21 +7,6 @@
   }
 }
 
-/* Hide scroll buttons in IE/Edge  */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    /* IE10+ */
-  .scroll-button {
-    display: none;
-  }
-}
-
-@supports (-ms-ime-align:auto) {
-  /* Edge */
-  .scroll-button {
-    display: none;
-  }
-}
-
 @media screen and (min-width: 600px) {
   :root {
     --vertical-gutter: 3em;
@@ -132,23 +117,23 @@
   }
 
   /* Always display work item details on sufficiently large screen */
-  .experience {
+  /* .experience {
     padding: var(--vertical-gutter) var(--horizontal-gutter);
     display: block;
-  }
+  } */
 
-  .scroll-button {
+  /* .scroll-button {
     display: none;
-  }
+  } */
 
   .details-toggle {
     display: none;
   }
 
-  .work-items {
+  /* .work-items {
     display: block;
     overflow-x: initial;
-  }
+  } */
 
   .work-item__summary {
     display: block;

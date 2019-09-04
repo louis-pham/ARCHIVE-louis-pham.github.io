@@ -203,14 +203,14 @@ footer {
 }
 
 .experience {
-  padding: 0;
+  padding: var(--vertical-gutter) 0 0 0;
   display: grid;
-  grid-template-columns: var(--horizontal-gutter) 1fr var(--horizontal-gutter);
-  grid-template-rows: 12em 1em auto;
+  grid-template-columns: var(--horizontal-gutter) 1fr 1fr var(--horizontal-gutter);
+  grid-template-rows: auto auto auto;
   grid-template-areas:
-  ". header ."
-  ". . ."
-  "work-items work-items work-items";
+  ". header header ."
+  ". . work-item-index ."
+  "work-items work-items work-items work-items";
   position: relative;
 }
 
@@ -218,12 +218,19 @@ footer {
   grid-area: header;
   align-self: end;
   display: block;
-  margin: 0;
+}
+
+.experience__work-item-index {
+  grid-area: work-item-index;
+  align-self: end;
+  justify-self: end;
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #5764a0;
 }
 
 .work-items {
   scroll-snap-type: x mandatory;
-  -ms-scroll-snap-type: mandatory;
   overflow-x: scroll;
   grid-area: work-items;
   display: grid;
@@ -234,6 +241,7 @@ footer {
   calc(var(--horizontal-gutter) / 2);
   grid-template-rows: minmax(150px, 1fr);
   scrollbar-width: none; /* hide scrollbar on FireFox */
+  -ms-overflow-style: none;
 }
 
 /* hide scrollbar on Chrome */

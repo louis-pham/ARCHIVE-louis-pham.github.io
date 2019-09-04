@@ -7,4 +7,3 @@ The actual page can be found [here](https://louis-pham.github.io/).
 - fix SVG flickering in Edge
   - https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/10440554/
   - https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/16011476/
-- add index display for work items in Experience section
