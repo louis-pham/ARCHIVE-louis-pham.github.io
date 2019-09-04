@@ -72,7 +72,7 @@ class Experience extends React.Component {
         <span className="experience__header">
           <h2>Experience</h2>
         </span>
-        <span className="experience__work-item-index">Item: {this.state.itemInView + 1} of 3</span>
+        <span className="experience__work-item-index">{this.state.itemInView + 1} of 3</span>
         <span className={"scroll-button scroll-button__previous" + this.toggleScrollButton("L")} onClick={() => this.doScroll("L")}><i className="fas fa-3x fa-chevron-left"></i></span>
         <span className={"scroll-button scroll-button__next" + this.toggleScrollButton("R")} onClick={() => this.doScroll("R")}><i className="fas fa-3x fa-chevron-right"></i></span>
         <div className="work-items" ref={this.workItemsRef}>
