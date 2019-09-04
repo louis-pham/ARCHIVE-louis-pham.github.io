@@ -25,7 +25,9 @@ class Experience extends React.Component {
         ref: React.createRef(),
       };
     });
+  }
 
+  componentDidMount() {
     const callback = entries => {
       entries.forEach( entry => {
           if (entry.intersectionRatio > THRESHOLD) {
@@ -36,11 +38,10 @@ class Experience extends React.Component {
     };
 
     this.observer = new IntersectionObserver(callback, {
-      threshold: THRESHOLD
+      threshold: THRESHOLD,
+      root: this.workItemsRef.current,
     });
-  }
 
-  componentDidMount() {
     Object.values(this.singleWorkItemRefs).forEach(item =>
       this.observer.observe(item.ref.current)
     );
