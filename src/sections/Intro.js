@@ -7,6 +7,8 @@ function Intro(props) {
       <div className="intro__moon" aria-hidden="true"></div>
       <h1 className="intro__name animated fadeIn">Hey! I'm <span>Louis Pham</span>,</h1>
       <span className="intro__title animated fadeIn">and I'm a front end developer.</span>
+
+      <i class="scroll-down-icon fas fa-angle-double-down fa-6x animated infinite delay-1s"></i>
     </section>
   );
 }
