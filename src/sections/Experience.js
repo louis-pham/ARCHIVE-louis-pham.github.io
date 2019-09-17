@@ -5,6 +5,7 @@ import WI2 from './work_items/WI2.jsx';
 import WI3 from './work_items/WI3.jsx';
 import smoothscroll from 'smoothscroll-polyfill';
 import scrollSnapPolyfill from 'css-scroll-snap-polyfill'
+import Swiper from 'swiper';
 
 smoothscroll.polyfill();
 scrollSnapPolyfill();
