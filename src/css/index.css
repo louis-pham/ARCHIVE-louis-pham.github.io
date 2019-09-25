@@ -249,8 +249,10 @@ footer {
   repeat(3, calc(100% - 2 * var(--horizontal-gutter)))
   calc(var(--horizontal-gutter) / 2);
   grid-template-rows: minmax(150px, 1fr);
-  scrollbar-width: none; /* hide scrollbar on FireFox */
+  /* hide scrollbar on FireFox */
+  scrollbar-width: none;
   -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* hide scrollbar on Chrome */
@@ -326,8 +328,7 @@ footer {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 38%;
-  max-width: 300px;
+  width: 100%;
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.15), 0 2px 10px 0 rgba(0,0,0,0.06);
 }
 

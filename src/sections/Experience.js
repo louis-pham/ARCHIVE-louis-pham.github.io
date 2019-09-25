@@ -19,6 +19,7 @@ class Experience extends React.Component {
     super(props);
     this.state = {
       itemInView: 0,
+      prevIntersectionRatios: [0,0,0],
     }
     this.workItemsRef = React.createRef();
     this.singleWorkItemRefs = WORKITEMS.map((elem, i) => {
@@ -32,9 +33,15 @@ class Experience extends React.Component {
   componentDidMount() {
     const callback = entries => {
       entries.forEach( entry => {
-          if (entry.intersectionRatio > THRESHOLD) {
-            this.setState({itemInView: parseInt(entry.target.id)});
+        let itemId = entry.target.id;
+        let prevRatios = this.state.prevIntersectionRatios.slice();
+          if (entry.intersectionRatio >= THRESHOLD && entry.intersectionRatio >= prevRatios[itemId]) {
+            this.setState({
+              itemInView: parseInt(entry.target.id),
+            });
           }
+          prevRatios[itemId] = entry.intersectionRatio;
+          this.setState({prevIntersectionRatios: prevRatios});
         }
       );
     };
