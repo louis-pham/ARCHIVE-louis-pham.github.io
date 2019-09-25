@@ -209,3 +209,17 @@
     height: 15.75em;
   }
 }
+
+/* IE/Edge fallbacks */
+_:-ms-lang(x), .work-items {
+  display: block;
+  padding: 0 var(--horizontal-gutter) var(--vertical-gutter) var(--horizontal-gutter) ;
+}
+
+_:-ms-lang(x), .experience__work-item-index {
+  display: none;
+}
+
+_:-ms-lang(x), .scroll-button {
+  display: none;
+}

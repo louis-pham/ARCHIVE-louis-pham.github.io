@@ -79,7 +79,6 @@ ul {
 
 section {
   padding: var(--vertical-gutter) var(--horizontal-gutter);
-  /* grid-column: 2 / -2; */
 }
 
 section:nth-child(even) {
