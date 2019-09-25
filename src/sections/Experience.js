@@ -8,9 +8,11 @@ import WI3 from './work_items/WI3.jsx';
 
 // smoothscroll.polyfill();
 // scrollSnapPolyfill();
-
+let parser = require('ua-parser-js');
+let ua = parser();
 const WORKITEMS = [WI1, WI2, WI3];
 const THRESHOLD = 0.75;
+const ISIEBROWSER = ua.browser.name.toLowerCase() === "ie" || ua.browser.name.toLowerCase() === "edge";
 
 class Experience extends React.Component {
   constructor(props) {
@@ -52,18 +54,20 @@ class Experience extends React.Component {
   }
 
   doScroll(side) {
-    let itemToScrollTo = null;
-    let scrollByY = 0;
-    if (side === "L") {
-      itemToScrollTo = this.state.itemInView - 1;
-    } else if (side === "R") {
-      itemToScrollTo = this.state.itemInView + 1;
-    }
+    if (!ISIEBROWSER) {
+      let itemToScrollTo = null;
+      let scrollByY = 0;
+      if (side === "L") {
+        itemToScrollTo = this.state.itemInView - 1;
+      } else if (side === "R") {
+        itemToScrollTo = this.state.itemInView + 1;
+      }
 
-    if (itemToScrollTo < this.singleWorkItemRefs.length && itemToScrollTo >= 0) {
-      scrollByY = this.singleWorkItemRefs[itemToScrollTo].ref.current.clientWidth;
-      scrollByY = side === "L" ? -scrollByY : scrollByY;
-      this.workItemsRef.current.scrollBy({top: 0, left: scrollByY, behavior: "smooth"});
+      if (itemToScrollTo < this.singleWorkItemRefs.length && itemToScrollTo >= 0) {
+        scrollByY = this.singleWorkItemRefs[itemToScrollTo].ref.current.clientWidth;
+        scrollByY = side === "L" ? -scrollByY : scrollByY;
+        this.workItemsRef.current.scrollBy({top: 0, left: scrollByY, behavior: "smooth"});
+      }
     }
   }
 
