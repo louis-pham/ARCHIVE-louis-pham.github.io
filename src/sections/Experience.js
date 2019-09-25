@@ -3,12 +3,11 @@ import WorkItem from './WorkItem.js';
 import WI1 from './work_items/WI1.jsx';
 import WI2 from './work_items/WI2.jsx';
 import WI3 from './work_items/WI3.jsx';
-import smoothscroll from 'smoothscroll-polyfill';
-import scrollSnapPolyfill from 'css-scroll-snap-polyfill'
-import Swiper from 'swiper';
+// import smoothscroll from 'smoothscroll-polyfill';
+// import scrollSnapPolyfill from 'css-scroll-snap-polyfill'
 
-smoothscroll.polyfill();
-scrollSnapPolyfill();
+// smoothscroll.polyfill();
+// scrollSnapPolyfill();
 
 const WORKITEMS = [WI1, WI2, WI3];
 const THRESHOLD = 0.75;
