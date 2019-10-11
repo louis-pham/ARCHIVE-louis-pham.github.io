@@ -14,8 +14,8 @@
   }
 
   .intro__moon {
-    bottom: -10em;
-    right: -5em;
+    bottom: 1em;
+    left: 23em;
     height: 350px;
     width: 350px;
   }
@@ -60,15 +60,15 @@
   }
 
   .intro__moon {
-    bottom: -15em;
-    right: -6em;
+    bottom: -4em;
+    left: 25em;
     height: 450px;
     width: 450px;
   }
 
   .intro__heatpipe {
-    top: -690px;
-    right: -400px;
+    top: -675px;
+    left: 300px;
   }
 
   .work-item {
@@ -98,15 +98,15 @@
   }
 
   .intro__moon {
-    bottom: -22em;
-    right: 3em;
-    height: 600px;
-    width: 600px;
+    bottom: -5em;
+    left: 35em;
+    height: 500px;
+    width: 500px;
   }
 
   .intro__heatpipe {
-    top: -780px;
-    right: -420px;
+    top: -790px;
+    left: 500px;
     height: 900px;
     width: 900px;
   }
@@ -195,15 +195,15 @@
   }
 
   .intro__moon {
-    bottom: -25em;
-    left: 35em;
-    height: 700px;
-    width: 700px;
+    bottom: -13em;
+    left: 39em;
+    height: 650px;
+    width: 650px;
   }
 
   .intro__heatpipe {
-    top: -920px;
-    right: -550px;
+    top: -900px;
+    left: 650px;
     height: 1000px;
     width: 1000px;
   }
@@ -235,8 +235,8 @@ _:-ms-lang(x), .scroll-button {
 
 @media screen and (min-width: 1600px) {
   .intro__moon {
-    bottom: -25em;
-    left: 45em;
+    bottom: -10em;
+    left: 51em;
     height: 700px;
     width: 700px;
   }
