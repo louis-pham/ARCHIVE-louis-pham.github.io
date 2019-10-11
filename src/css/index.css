@@ -9,7 +9,7 @@ html {
 
 body {
   margin: 0;
-  text-align: center;
+  text-align: left;
   font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 14px;
   color: rgb(0,0,0);
@@ -37,7 +37,6 @@ h2 {
   font-size: 3.8em;
   font-weight: normal;
   line-height: 1.4em;
-  color: #3d4a86;
 }
 
 h3 {
@@ -86,6 +85,11 @@ section:nth-child(even) {
   background-color: rgba(154, 154, 154, 0.1);
 }
 
+section:first-child {
+  background-color: rgb(245, 245, 245);
+  background-color: rgba(154, 154, 154, 0.1);
+}
+
 section:nth-child(odd):not(:first-child) {
   background-color: rgb(252, 252, 252);
   background-color: rgba(230, 230, 230, 0.1);
@@ -120,7 +124,7 @@ footer {
   min-height: 35px;
   color: white;
   text-align: right;
-  background-color: #0c0015;
+  background-color: #090909;
 }
 
 .hidden {
@@ -142,24 +146,33 @@ footer {
 .intro {
   position: relative;
   padding: 0;
-  min-height: 400px;
-  height: 99vh;
   overflow: hidden;
-  color: white;
-  background-color: #0c0015;
-  background: url(/images/stars.svg), #0c0015;
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+}
+
+.intro__wrapper {
+  position: relative;
+  padding: 10vh var(--horizontal-gutter);
+  min-height: 200px;
+  background: rgb(245, 245, 245) url(/images/grid.svg);
+  overflow: hidden;
+}
+
+.intro__heatpipe {
+  position: absolute;
+  top: -700px;
+  right: -600px;
+  height: 800px;
+  width: 800px;
+  background: url(/images/heatpipe.svg) top left no-repeat;
+  transform: rotateZ(-10deg);
 }
 
 .intro__moon {
   position: absolute;
-  bottom: -10em;
-  right: -7em;
-  height: 65vh;
-  width: 65vh;
+  bottom: -3em;
+  right: -3em;
+  height: 200px;
+  width: 200px;
   background: url(/images/moon.svg) top left no-repeat;
   -webkit-animation: fadeInUp 2s ease-out, float 7s ease-in-out 2s infinite;
   -moz-animation: fadeInUp 2s ease-out, float 7s ease-in-out 2s infinite;
@@ -167,43 +180,31 @@ footer {
   transition: bottom,right,height,width 1s ease-in-out;
 }
 
-.intro__earth {
-  position: absolute;
-  top: -2em;
-  left: -7em;
-  height: 30vh;
-  width: 30vh;
-  background: url(/images/earth.svg) top left no-repeat;
-  -webkit-animation: rotateInDownLeft 1.5s ease-out, rotate 60s linear 1.5s infinite;
-  -moz-animation: rotateInDownLeft 1.5s ease-out, rotate 60s linear 1.5s infinite;
-  animation: rotateInDownLeft 1.5s ease-out, rotate 60s linear 1.5s infinite;
-  transition: bottom,right,height,width 1s ease-in-out;
-}
-
 .intro__name {
   margin: 0;
-  padding-top: 29vh;
-  font-size: 3.0em;
+  font-size: 5.0em;
   font-weight: normal;
   line-height: 1.3em;
   animation-delay: 0.2s;
+
 }
 
 .intro__name > span {
   font-weight: bold;
-  text-decoration: underline;
 }
 
 .intro__title {
   display: block;
   margin: 1em 0;
   font-size: 1.6em;
+  font-weight: bold;
+  color: #848484;
   animation-delay: 0.7s;
 }
 
 .scroll-down-icon {
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
   left: 50%;
   animation-name: fadeInOut;
   animation-direction: alternate;
@@ -235,7 +236,6 @@ footer {
   justify-self: end;
   font-size: 1.7em;
   font-weight: bold;
-  color: #5764a0;
 }
 
 .work-items {
@@ -284,11 +284,12 @@ footer {
   scroll-snap-align: center;
   margin: 16px 0;
   padding: 20px 30px;
-  border-left: #cdd6ff solid 5px;
+  border-left: #bac solid 5px;
   background: white;
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.15), 0 2px 10px 0 rgba(0,0,0,0.06);
   border-radius: 6px;
   position: relative;
+  text-align: center;
 }
 
 .work-item:focus {
@@ -323,12 +324,11 @@ footer {
 }
 
 .project-item__image {
-  margin: auto;
   border-radius: 6px;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 100%;
+  width: 70%;
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.15), 0 2px 10px 0 rgba(0,0,0,0.06);
 }
 
@@ -378,7 +378,7 @@ footer {
 
 .radargraph-holder {
   position: absolute;
-  left: -7em;
+  right: -3em;
   top: -3em;
   width: 16em;
   height: 15em;
@@ -425,7 +425,7 @@ footer {
 .contact-form {
   font-family: inherit;
   text-align: left;
-  padding: 2em 2em;
+  padding: 1em 0;
 }
 
 .contact-form * {
@@ -437,4 +437,5 @@ footer {
   background: -webkit-linear-gradient(66deg, rgba(255,192,130,1) 0%, rgba(232,199,234,1) 98%, rgba(227,200,255,1) 100%);
   background: -o-linear-gradient(66deg, rgba(255,192,130,1) 0%, rgba(232,199,234,1) 98%, rgba(227,200,255,1) 100%);
   background: linear-gradient(156deg, rgba(255,192,130,1) 0%, rgba(232,199,234,1) 98%, rgba(227,200,255,1) 100%);
+  margin-top: 10px;
 }

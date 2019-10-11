@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './css/index.css';
 import './css/keyframes.css';
 import './css/mediaqueries.css';
+import './css/nightmode.css';
 import App from './App.js';
 import * as serviceWorker from './serviceWorker';
 

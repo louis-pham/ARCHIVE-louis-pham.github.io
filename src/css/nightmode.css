@@ -1,0 +1,44 @@
+.night-mode {
+  background-color: black;
+  color: white;
+}
+
+.night-mode a {
+  color: #adf;
+}
+
+.night-mode a:visited {
+  color: #bac;
+}
+
+.night-mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+  color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.night-mode .night-mode-toggle {
+  color: white;
+  text-shadow: 0px 0px 15px white;
+}
+
+.night-mode .intro__wrapper {
+  background-color: black;
+}
+
+.night-mode .work-item {
+  border-left: #50366b solid 5px;
+  background: #252525;
+}
+
+.night-mode .social-media a {
+  color: rgb(180, 180, 180);
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.night-mode fieldset input,.night-mode fieldset textarea {
+  background-color: #211d27;
+}

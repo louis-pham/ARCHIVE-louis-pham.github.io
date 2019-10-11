@@ -13,18 +13,11 @@
     --horizontal-gutter: 4em;
   }
 
-  .intro__earth {
-    top: -2em;
-    left: -4em;
-    height: 32vh;
-    width: 32vh;
-  }
-
   .intro__moon {
-    bottom: -8em;
-    right: -8em;
-    height: 70vh;
-    width: 70vh;
+    bottom: -10em;
+    right: -5em;
+    height: 350px;
+    width: 350px;
   }
 
   .work-item {
@@ -66,14 +59,16 @@
     --horizontal-gutter: 8em;
   }
 
-  .intro__earth {
-    height: 34vh;
-    width: 34vh;
+  .intro__moon {
+    bottom: -15em;
+    right: -6em;
+    height: 450px;
+    width: 450px;
   }
 
-  .intro__moon {
-    height: 75vh;
-    width: 75vh;
+  .intro__heatpipe {
+    top: -690px;
+    right: -400px;
   }
 
   .work-item {
@@ -81,8 +76,8 @@
   }
 
   .radargraph-holder {
-    left: -23em;
-    top: 7em;
+    right: -23em;
+    top: 2em;
     width: 39em;
     height: 38em;
   }
@@ -102,18 +97,18 @@
     --horizontal-gutter: 13em;
   }
 
-  .intro__earth {
-    top: -1em;
-    left: -1em;
-    height: 40vh;
-    width: 40vh;
+  .intro__moon {
+    bottom: -22em;
+    right: 3em;
+    height: 600px;
+    width: 600px;
   }
 
-  .intro__moon {
-    bottom: -12em;
-    right: -10em;
-    height: 80vh;
-    width: 80vh;
+  .intro__heatpipe {
+    top: -780px;
+    right: -420px;
+    height: 900px;
+    width: 900px;
   }
 
   /* Always display work item details on sufficiently large screen */
@@ -144,15 +139,15 @@
   }
 
   .radargraph-holder {
-    left: -22em;
+    right: -15em;
     top: 3em;
     width: 44em;
     height: 42em;
   }
 
   .fightstick-holder {
-    right: 1em;
-    top: 1em;
+    right: 3em;
+    top: 2em;
   }
 
   @supports (display: grid) {
@@ -199,8 +194,22 @@
     --horizontal-gutter: 20em;
   }
 
+  .intro__moon {
+    bottom: -25em;
+    left: 35em;
+    height: 700px;
+    width: 700px;
+  }
+
+  .intro__heatpipe {
+    top: -920px;
+    right: -550px;
+    height: 1000px;
+    width: 1000px;
+  }
+
   .radargraph-holder {
-    left: -17em;
+    right: -8em;
   }
 
   .fightstick-holder {
@@ -222,4 +231,25 @@ _:-ms-lang(x), .experience__work-item-index {
 
 _:-ms-lang(x), .scroll-button {
   display: none;
+}
+
+@media screen and (min-width: 1600px) {
+  .intro__moon {
+    bottom: -25em;
+    left: 45em;
+    height: 700px;
+    width: 700px;
+  }
+
+  .radargraph-holder {
+    right: 4em;
+    top: 7em;
+  }
+
+  .fightstick-holder {
+    right: 2em;
+    top: 0em;
+    width: 36em;
+    height: 19.75em;
+  }
 }
