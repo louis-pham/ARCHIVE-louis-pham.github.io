@@ -6,8 +6,8 @@ function ContactMe(props) {
       <h2>Let's get in touch!</h2>
       <form id="contact-form" className="contact-form" action="https://formspree.io/l.c.pham@hotmail.com" method="POST">
         <fieldset>
-          <input placeholder="Your Name" type="text" name="name" id="name-input" required="" />
-          <input placeholder="Your Email" type="email" name="email" id="email-input" required="" />
+          <input placeholder="Your Name" type="text" name="name" id="name-input" required />
+          <input placeholder="Your Email" type="email" name="email" id="email-input" required />
           <textarea rows="7" placeholder="Your Message" type="text" name="message" id="message"></textarea>
         </fieldset>
         <input className="button contact-form__submit" type="submit" id="submit" value="Submit" />

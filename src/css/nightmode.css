@@ -41,6 +41,7 @@
 
 .night-mode fieldset input,.night-mode fieldset textarea {
   background-color: #211d27;
+  color: #bebebe;
 }
 
 .night-mode input::placeholder, .night-mode textarea::placeholder {

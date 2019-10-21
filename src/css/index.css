@@ -127,6 +127,10 @@ footer {
   background-color: #090909;
 }
 
+.container {
+  font-size: 0.8em;
+}
+
 .hidden {
   display: none;
 }
@@ -136,10 +140,14 @@ footer {
   border: none;
   font-size: 25px;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.1s ease-out;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
 }
 
 .button:active {
-  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.6);
   background-color: #cecece;
 }
 
@@ -168,10 +176,13 @@ footer {
   height: 250px;
   width: 250px;
   background: url(/images/moon.svg) top left no-repeat;
-  -webkit-animation: fadeInUp 2s ease-out, float 7s ease-in-out 2s infinite;
-  -moz-animation: fadeInUp 2s ease-out, float 7s ease-in-out 2s infinite;
-  animation: fadeInUp 2s ease-out, float 7s ease-in-out 2s infinite;
   transition: bottom,right,height,width 1s ease-in-out;
+}
+
+.intro--loading-done > .intro__moon {
+  -webkit-animation: fadeInUp 2s 0.6s ease-out, float 7s ease-in-out 2s infinite;
+  -moz-animation: fadeInUp 2s 0.6s ease-out, float 7s ease-in-out 2s infinite;
+  animation: fadeInUp 2s 0.6s ease-out, float 7s ease-in-out 2s infinite;
 }
 
 .intro__name {
@@ -179,8 +190,12 @@ footer {
   font-size: 5.0em;
   font-weight: normal;
   line-height: 1.3em;
-  animation-delay: 0.2s;
+  opacity: 0;
+}
 
+.intro--loading-done > .intro__name {
+  animation: fadeIn 1.3s 1.3s ease-out;
+  animation-fill-mode: both;
 }
 
 .intro__name > span {
@@ -193,7 +208,12 @@ footer {
   font-size: 1.6em;
   font-weight: bold;
   color: #848484;
-  animation-delay: 0.7s;
+  opacity: 0;
+}
+
+.intro--loading-done > .intro__title {
+  animation: fadeIn 1.3s 1.8s ease-out;
+  animation-fill-mode: both;
 }
 
 .scroll-down-icon {
