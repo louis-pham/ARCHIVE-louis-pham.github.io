@@ -15,7 +15,7 @@
   height: calc(100vh - var(--bottom-border-height));
   width: 100vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: auto;
   grid-template-rows: auto auto;
   /* align-items: center; */
   justify-items: center;
@@ -25,15 +25,16 @@
 }
 
 .loading__name {
-  grid-column: 2 / 3;
+  grid-column: 1 / 2;
   grid-row: 1 / 2;
   align-self: end;
   font-size: 4em;
+  line-height: 1em;
   padding-bottom: 0px;
 }
 
 .loading__welcome {
-  grid-column: 2 / 3;
+  grid-column: 1 / 2;
   grid-row: 2 / 3;
   align-self: end;
   font-size: 1.2em;

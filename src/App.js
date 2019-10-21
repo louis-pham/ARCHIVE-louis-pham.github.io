@@ -5,9 +5,7 @@ import SideProjects from './sections/SideProjects.js';
 import Skills from './sections/Skills.js';
 import AboutMe from './sections/AboutMe.js';
 import ContactMe from './sections/ContactMe.js';
-
-const currentTime = new Date().getTime();
-const EXPIRYDURATION = 60 * 60 * 24 * 1000; // 24 hours in milliseconds
+import Cookies from 'js-cookie';
 
 function App() {
   const [nightModeOn, toggleNightMode] = useState(false);
@@ -15,23 +13,17 @@ function App() {
   const loadingScreen = React.createRef();
 
   let setNightMode = () => {
-    toggleNightMode(!nightModeOn);
-    localStorage.setItem("night-mode", !nightModeOn);
+    let newValue = !nightModeOn;
+    toggleNightMode(newValue);
+    Cookies.set("night-mode", newValue, {expires: 1});
   };
 
   useEffect(() => {
-    if (!localStorage.getItem("expiry-time")) {
-      localStorage.setItem("expiry-time", currentTime);
-    }
-    if (currentTime >= parseInt(localStorage.getItem("expiry-time")) + EXPIRYDURATION) {
-      localStorage.clear();
-      localStorage.setItem("expiry-time", currentTime);
+    if (!Cookies.get("night-mode")) {
+      Cookies.set("night-mode", "false", {expires: 1});
     }
 
-    if (!localStorage.getItem("night-mode")) {
-      localStorage.setItem("night-mode", "false");
-    }
-    if (localStorage.getItem("night-mode") === "false") {
+    if (Cookies.get("night-mode") === "false") {
       toggleNightMode(false);
     } else {
       toggleNightMode(true);
@@ -44,14 +36,14 @@ function App() {
       }
     });
     setTimeout(() => toggleLoading(false), 750);
-  }, []);
+  }, [loadingScreen]);
 
   return (
     <div className={"container" + (nightModeOn ? " night-mode" : "")}>
       <div ref={loadingScreen} className={"loading" + (!isLoading ? " loading--done" : "")}>
         <div className="loading__contents">
           <h1 className="loading__name animated fadeInUp"><span>Louis Pham</span></h1>
-          <h2 className="loading__welcome animated">Hey there! 👋</h2>
+          <h2 className="loading__welcome animated">Hey there! <span role="img" aria-hidden="true">👋</span></h2>
         </div>
         <div className="loading__bottom-border"></div>
       </div>

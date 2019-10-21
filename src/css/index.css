@@ -171,8 +171,8 @@ footer {
 
 .intro__moon {
   position: absolute;
-  bottom: -3em;
-  left: 10em;
+  bottom: -5em;
+  left: 13em;
   height: 250px;
   width: 250px;
   background: url(/images/moon.svg) top left no-repeat;
