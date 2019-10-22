@@ -10,13 +10,26 @@ import Cookies from 'js-cookie';
 function App() {
   const [nightModeOn, toggleNightMode] = useState(false);
   const [isLoading, toggleLoading] = useState(true);
-  const loadingScreen = React.createRef();
 
   let setNightMode = () => {
     let newValue = !nightModeOn;
     toggleNightMode(newValue);
     Cookies.set("night-mode", newValue, {expires: 1});
   };
+
+  let hideElement = (e) => {
+    e.target.classList.add("hidden");
+  }
+
+  let imagesLoaded = () => {
+    let allImages = document.querySelectorAll('img');
+    for (const IMG of allImages) {
+      if (!IMG.complete) {
+        return false;
+      }
+    }
+    return true;
+  }
 
   useEffect(() => {
     if (!Cookies.get("night-mode")) {
@@ -29,21 +42,23 @@ function App() {
       toggleNightMode(true);
     }
 
-    // hide the loading screen after animation ends
-    loadingScreen.current.addEventListener('transitionend', (e) => {
-      if (e.target.classList.contains("loading")) {
-        e.target.classList.add("hidden");
+    let checkImagesLoaded = () => {
+      if (imagesLoaded()) {
+        toggleLoading(false);
+      } else {
+        setTimeout(checkImagesLoaded, 1000);
       }
-    });
-    setTimeout(() => toggleLoading(false), 750);
-  }, [loadingScreen]);
+    }
+    checkImagesLoaded();
+
+  }, []);
 
   return (
     <div className={"container" + (nightModeOn ? " night-mode" : "")}>
-      <div ref={loadingScreen} className={"loading" + (!isLoading ? " loading--done" : "")}>
+      <div className={"loading" + (!isLoading ? " loading--done" : "")} onTransitionEnd={hideElement}>
         <div className="loading__contents">
           <h1 className="loading__name animated fadeInUp"><span>Louis Pham</span></h1>
-          <h2 className="loading__welcome animated">Hey there! <span role="img" aria-hidden="true">👋</span></h2>
+          <h2 className="loading__welcome animated">Thanks for waiting! <span role="img" aria-hidden="true">👋</span></h2>
         </div>
         <div className="loading__bottom-border"></div>
       </div>

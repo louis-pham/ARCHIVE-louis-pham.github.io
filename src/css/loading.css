@@ -53,12 +53,12 @@
 .loading--done {
   transform: scaleY(0.3) translateY(-100vh);
   transform-origin: center top;
-  transition: transform var(--my-timing-function) 1.5s 1s;
+  transition: transform var(--my-timing-function) 2s 1.5s;
 }
 
 .loading--done .loading__contents {
   transform: translateY(-100vh);
-  transition: transform var(--my-timing-function) 6s 1s;
+  transition: transform var(--my-timing-function) 7s 1.5s;
 }
 
 .loading--done .loading__welcome {
