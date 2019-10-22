@@ -6,6 +6,8 @@ import Skills from './sections/Skills.js';
 import AboutMe from './sections/AboutMe.js';
 import ContactMe from './sections/ContactMe.js';
 import Cookies from 'js-cookie';
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 
 function App() {
   const [nightModeOn, toggleNightMode] = useState(false);
