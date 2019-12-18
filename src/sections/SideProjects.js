@@ -5,6 +5,13 @@ function SideProjects(props) {
     <section className="side-projects">
       <h2>Side Projects</h2>
       <div className="project-item">
+        <h3 className="project-item__title">Battleship <a title="Go to my Battleship demo page" href="https://battleship.lcpham.now.sh/"><i className="fas fa-external-link-alt"></i></a></h3>
+        <img className="project-item__image" alt="" src="images/side-projects/battleship.png"/>
+        <p className="project-item__description">
+          A web-based recreation of the popular game Battleship using DOM manipulation. Built with HTML,  CSS, and ES6.
+        </p>
+      </div>
+      <div className="project-item">
         <h3 className="project-item__title">Weather Forecast <a title="Go to my Weather Forecast demo page" href="http://weather-forecast.louis-pham.surge.sh"><i className="fas fa-external-link-alt"></i></a></h3>
         <img className="project-item__image" alt="" src="images/side-projects/weather-forecast.png"/>
         <p className="project-item__description">
