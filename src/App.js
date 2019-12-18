@@ -5,47 +5,67 @@ import SideProjects from './sections/SideProjects.js';
 import Skills from './sections/Skills.js';
 import AboutMe from './sections/AboutMe.js';
 import ContactMe from './sections/ContactMe.js';
-
-const currentTime = new Date().getTime();
-const EXPIRYDURATION = 60 * 60 * 24 * 1000; // 24 hours in milliseconds
+import Cookies from 'js-cookie';
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 
 function App() {
   const [nightModeOn, toggleNightMode] = useState(false);
-  // const [lastScrollY, updateScrollY] = useState(0);
-  // const [lastScrollDirection, updateScrollDirection] = useState("");
+  const [isLoading, toggleLoading] = useState(true);
 
   let setNightMode = () => {
-    toggleNightMode(!nightModeOn);
-    localStorage.setItem("night-mode", !nightModeOn);
+    let newValue = !nightModeOn;
+    toggleNightMode(newValue);
+    Cookies.set("night-mode", newValue, {expires: 1});
   };
 
-  useEffect(() => {
-    if (!localStorage.getItem("expiry-time")) {
-      localStorage.setItem("expiry-time", currentTime);
+  let hideElement = (e) => {
+    e.target.classList.add("hidden");
+  }
+
+  let imagesLoaded = () => {
+    let allImages = document.querySelectorAll('img');
+    for (const IMG of allImages) {
+      if (!IMG.complete) {
+        return false;
+      }
     }
-    if (currentTime >= parseInt(localStorage.getItem("expiry-time")) + EXPIRYDURATION) {
-      localStorage.clear();
-      localStorage.setItem("expiry-time", currentTime);
+    return true;
+  }
+
+  useEffect(() => {
+    if (!Cookies.get("night-mode")) {
+      Cookies.set("night-mode", "false", {expires: 1});
     }
 
-    if (!localStorage.getItem("night-mode")) {
-      localStorage.setItem("night-mode", "false");
-    }
-    if (localStorage.getItem("night-mode") === "false") {
+    if (Cookies.get("night-mode") === "false") {
       toggleNightMode(false);
     } else {
       toggleNightMode(true);
     }
 
-    // window.addEventListener("scroll", (event) => {
-    //   console.log(event.srcElement);
-    // });
+    let checkImagesLoaded = () => {
+      if (imagesLoaded()) {
+        toggleLoading(false);
+      } else {
+        setTimeout(checkImagesLoaded, 1000);
+      }
+    }
+    checkImagesLoaded();
+
   }, []);
 
   return (
     <div className={"container" + (nightModeOn ? " night-mode" : "")}>
+      <div className={"loading" + (!isLoading ? " loading--done" : "")} onTransitionEnd={hideElement}>
+        <div className="loading__contents">
+          <h1 className="loading__name animated fadeInUp"><span>Louis Pham</span></h1>
+          <h2 className="loading__welcome animated">Thanks for waiting! <span role="img" aria-hidden="true">👋</span></h2>
+        </div>
+        <div className="loading__bottom-border"></div>
+      </div>
       <span className="animated fadeInRight night-mode-toggle" onClick={() => setNightMode()}><i className="fas fa-lightbulb fa-3x"></i></span>
-      <Intro />
+      <Intro isLoading={isLoading} />
       <Experience />
       <SideProjects />
       <Skills />

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
+import './css/loading.css';
 import './css/keyframes.css';
 import './css/mediaqueries.css';
 import './css/nightmode.css';

@@ -113,6 +113,7 @@ fieldset textarea {
   padding: 3px 7px;
   background-color: #dadada;
   font-size: 1.2em;
+  font-family: inherit;
 }
 
 fieldset textarea {
@@ -127,6 +128,10 @@ footer {
   background-color: #090909;
 }
 
+.container {
+  font-size: 0.8em;
+}
+
 .hidden {
   display: none;
 }
@@ -136,10 +141,14 @@ footer {
   border: none;
   font-size: 25px;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.1s ease-out;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
 }
 
 .button:active {
-  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.6);
   background-color: #cecece;
 }
 
@@ -163,15 +172,18 @@ footer {
 
 .intro__moon {
   position: absolute;
-  bottom: -3em;
-  left: 10em;
+  bottom: -5em;
+  left: 13em;
   height: 250px;
   width: 250px;
   background: url(/images/moon.svg) top left no-repeat;
-  -webkit-animation: fadeInUp 2s ease-out, float 7s ease-in-out 2s infinite;
-  -moz-animation: fadeInUp 2s ease-out, float 7s ease-in-out 2s infinite;
-  animation: fadeInUp 2s ease-out, float 7s ease-in-out 2s infinite;
   transition: bottom,right,height,width 1s ease-in-out;
+}
+
+.intro--loading-done > .intro__moon {
+  -webkit-animation: fadeInUp 2s 1s ease-out, float 7s ease-in-out 2s infinite;
+  -moz-animation: fadeInUp 2s 1s ease-out, float 7s ease-in-out 2s infinite;
+  animation: fadeInUp 2s 1s ease-out, float 7s ease-in-out 2s infinite;
 }
 
 .intro__name {
@@ -179,8 +191,12 @@ footer {
   font-size: 5.0em;
   font-weight: normal;
   line-height: 1.3em;
-  animation-delay: 0.2s;
+  opacity: 0;
+}
 
+.intro--loading-done > .intro__name {
+  animation: fadeIn 1.3s 1.9s ease-out;
+  animation-fill-mode: both;
 }
 
 .intro__name > span {
@@ -193,17 +209,12 @@ footer {
   font-size: 1.6em;
   font-weight: bold;
   color: #848484;
-  animation-delay: 0.7s;
+  opacity: 0;
 }
 
-.scroll-down-icon {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  animation-name: fadeInOut;
-  animation-direction: alternate;
-  animation-duration: 2s;
-  animation-timing-function: cubic-bezier(0.53, 0.28, 0.36, 1);
+.intro--loading-done > .intro__title {
+  animation: fadeIn 1.3s 2.5s ease-out;
+  animation-fill-mode: both;
 }
 
 .experience {
@@ -311,7 +322,7 @@ footer {
   flex-flow: row wrap;
 }
 
-.project-item > * {
+.project-item > .project-item__title {
   -webkit-flex: 1 100%;
   -ms-flex: 1 100%;
   flex: 1 100%;
@@ -422,10 +433,6 @@ footer {
   font-family: inherit;
   text-align: left;
   padding: 1em 0;
-}
-
-.contact-form * {
-  font-family: inherit;
 }
 
 .contact-form__submit {

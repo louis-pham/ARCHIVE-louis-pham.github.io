@@ -46,14 +46,16 @@ class Experience extends React.Component {
       );
     };
 
-    this.observer = new IntersectionObserver(callback, {
-      threshold: THRESHOLD,
-      root: this.workItemsRef.current,
-    });
+    if (!ISIEBROWSER) {
+      this.observer = new IntersectionObserver(callback, {
+        threshold: THRESHOLD,
+        root: this.workItemsRef.current,
+      });
 
-    Object.values(this.singleWorkItemRefs).forEach(item =>
-      this.observer.observe(item.ref.current)
-    );
+      Object.values(this.singleWorkItemRefs).forEach(item =>
+        this.observer.observe(item.ref.current)
+      );
+    }
   }
 
   toggleScrollButton(side) {
