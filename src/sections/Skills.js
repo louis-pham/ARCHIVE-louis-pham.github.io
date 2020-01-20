@@ -8,6 +8,10 @@ function Skills(props) {
         <div className="skill-level">
           <h3>Strong</h3>
           <div className="skill">
+            <img className="skill__icon" src="images/language-icons-svg/javascript.svg" alt=""/>
+            <span className="skill__label">JavaScript</span>
+          </div>
+          <div className="skill">
             <img className="skill__icon" src="images/language-icons-svg/html5.svg" alt=""/>
             <span className="skill__label">HTML 5</span>
           </div>
@@ -16,20 +20,16 @@ function Skills(props) {
             <span className="skill__label">CSS 3</span>
           </div>
           <div className="skill">
-            <img className="skill__icon" src="images/language-icons-svg/javascript.svg" alt=""/>
-            <span className="skill__label">JavaScript</span>
-          </div>
-          <div className="skill">
-            <img className="skill__icon" src="images/language-icons-svg/jquery.svg" alt=""/>
-            <span className="skill__label">jQuery</span>
+            <img className="skill__icon" src="images/language-icons-svg/nodejs-seeklogo.com.svg" alt=""/>
+            <span className="skill__label">Node.js</span>
           </div>
         </div>
 
         <div className="skill-level">
           <h3>Working Knowledge</h3>
           <div className="skill">
-            <img className="skill__icon skill__icon--medium" src="images/language-icons-svg/bootstrap.svg" alt=""/>
-            <span className="skill__label">Bootstrap</span>
+            <img className="skill__icon" src="images/language-icons-svg/mongodb-icon.svg" alt=""/>
+            <span className="skill__label">MongoDB</span>
           </div>
           <div className="skill">
             <img className="skill__icon skill__icon--medium" src="images/language-icons-svg/java.svg" alt=""/>
@@ -38,6 +38,18 @@ function Skills(props) {
           <div className="skill">
             <img className="skill__icon skill__icon--medium" src="images/language-icons-svg/python.svg" alt=""/>
             <span className="skill__label">Python</span>
+          </div>
+          <div className="skill">
+            <img className="skill__icon skill__icon--medium" src="images/language-icons-svg/bootstrap.svg" alt=""/>
+            <span className="skill__label">Bootstrap</span>
+          </div>
+          <div className="skill">
+            <img className="skill__icon" src="images/language-icons-svg/react.svg" alt=""/>
+            <span className="skill__label">React</span>
+          </div>
+          <div className="skill">
+            <img className="skill__icon" src="images/language-icons-svg/jquery.svg" alt=""/>
+            <span className="skill__label">jQuery</span>
           </div>
         </div>
       </div>

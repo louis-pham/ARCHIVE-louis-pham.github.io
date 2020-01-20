@@ -19,6 +19,15 @@ function AboutMe(props) {
       <p>
         Outside of work and studying, my spare time is taken up with dancing, video games, and going down YouTube rabbit holes.
       </p>
+      <h3>Education</h3>
+      <div className="education">
+        <img className="education__logo" src="images/education/PinClipart.com_assembly-clip-art_3859728.png" />
+        <p className="education__description"><b>Software Engineering Immersive</b>, General Assembly</p>
+      </div>
+      <div className="education">
+        <img className="education__logo" src="images/education/Utoronto_coa.svg" />
+        <p className="education__description"><b>B.Sc. with Honours in Computer Science and Astrophysics</b>, University of Toronto</p>
+      </div>
       <div className="fightstick-holder" aria-hidden="true"></div>
     </section>
   );

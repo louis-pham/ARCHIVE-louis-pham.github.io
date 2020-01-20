@@ -71,7 +71,7 @@ function App() {
       <Skills />
       <AboutMe />
       <ContactMe />
-      <footer className=""><span id="copyright">©<span id="copyright-year">2019</span> Louis Pham</span></footer>
+      <footer className=""><span id="copyright">©<span id="copyright-year">2020</span> Louis Pham</span></footer>
     </div>
   );
 }

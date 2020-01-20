@@ -4,7 +4,7 @@ function ContactMe(props) {
   return (
     <section className="contact-me">
       <h2>Let's get in touch!</h2>
-      <form id="contact-form" className="contact-form" action="https://formspree.io/l.c.pham@hotmail.com" method="POST">
+      <form id="contact-form" className="contact-form" action="https://formspree.io/mnqplqqy" method="POST">
         <fieldset>
           <input placeholder="Your Name" type="text" name="name" id="name-input" required />
           <input placeholder="Your Email" type="email" name="email" id="email-input" required />

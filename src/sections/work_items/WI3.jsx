@@ -14,7 +14,7 @@ const WI3 = {
           <a title="Go to InfoScribe" href="https://infoscribe.infoway-inforoute.ca">InfoScribe</a>
         </li>
         <li>
-          digital mockups (<a title="Go to the Clinical Requirements digital mockup" href="https://infocentral.infoway-inforoute.ca/extra/ca/clinical-requirements/html/start.html">1</a>, <a title="Go to the Interoperability Specification digital mockup" href="https://infocentral.infoway-inforoute.ca/extra/ca/interoperability-spec/html/start.html">2</a>)
+          digital mockups (<a title="Go to the Clinical Requirements digital mockup" href="https://infocentral.infoway-inforoute.ca/extra/ca/clinical-requirements/html/start.html">clinical requirements</a>, <a title="Go to the Interoperability Specification digital mockup" href="https://infocentral.infoway-inforoute.ca/extra/ca/interoperability-spec/html/start.html">specification</a>)
         </li>
         <li>
           HL7 Explorer

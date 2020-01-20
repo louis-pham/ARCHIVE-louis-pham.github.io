@@ -3,6 +3,17 @@
   --horizontal-gutter: 2em;
 }
 
+::selection {
+  background: #fdff45; /* WebKit/Blink Browsers */
+  color: rgb(0,0,0);
+  color: rgba(0,0,0,.84);
+}
+::-moz-selection {
+  background: #fdff45; /* Gecko Browsers */
+  color: rgb(0,0,0);
+  color: rgba(0,0,0,.84);
+}
+
 html {
   margin: 0;
 }
@@ -334,8 +345,9 @@ footer {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   width: 70%;
-  max-width: 600px;
+  max-width: 350px;
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.15), 0 2px 10px 0 rgba(0,0,0,0.06);
+  margin: auto;
 }
 
 .skills-section {
@@ -349,7 +361,8 @@ footer {
 
 .skill {
   display: inline-block;
-  padding: 0 15px 10px 15px;
+  padding: 10px;
+  margin: 5px;
 }
 
 .skill__icon {
@@ -396,6 +409,21 @@ footer {
 .about-me {
   position: relative;
   overflow: hidden;
+}
+
+.education {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.education__logo {
+  width: 75px;
+}
+
+.education__description {
+  padding: 0 10px;
 }
 
 .fightstick-holder {
