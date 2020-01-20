@@ -1,8 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	<title>HTML5 Logo</title>
-	<path d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6"/>
-	<path fill="#e44d26" d="M107.6 471l-33-370.4h362.8l-33 370.2L255.7 512"/>
-	<path fill="#f16529" d="M256 480.5V131H404.3L376 447"/>
-	<path fill="#ebebeb" d="M142 176.3h114v45.4h-64.2l4.2 46.5h60v45.3H154.4M156.4 336.3H202l3.2 36.3 50.8 13.6v47.4l-93.2-26"/>
-	<path fill="#fff" d="M369.6 176.3H255.8v45.4h109.6M361.3 268.2H255.8v45.4h56l-5.3 59-50.7 13.6v47.2l93-25.8"/>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="2048px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 2048 2048" width="2048px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css">
+   <![CDATA[
+    .fil4 {fill:none}
+    .fil0 {fill:#E55638}
+    .fil2 {fill:#EAEAEA}
+    .fil1 {fill:#F26B3A}
+    .fil3 {fill:#FEFEFE}
+   ]]>
+  </style></defs><g id="Layer_x0020_1"><g id="_337848256"><polygon class="fil0" id="_337847992" points="470.072,1638.46 346.817,255.999 1701.18,255.999 1577.79,1638.24 1023.17,1792 "/><polygon class="fil1" id="_337847968" points="1024,1674.47 1472.16,1550.22 1577.61,369.037 1024,369.037 "/><polygon class="fil2" id="_337848328" points="1024,881.773 799.639,881.773 784.142,708.146 1024,708.146 1024,538.593 1023.41,538.593 598.843,538.593 602.9,584.08 644.573,1051.32 1024,1051.32 "/><polygon class="fil2" id="_337847872" points="1024,1322.12 1023.26,1322.31 834.427,1271.32 822.351,1136.1 730.596,1136.1 652.147,1136.1 675.904,1402.32 1023.22,1498.74 1024,1498.52 "/><polygon class="fil3" id="_337847848" points="1023.41,881.773 1023.41,1051.32 1232.2,1051.32 1212.52,1271.22 1023.41,1322.26 1023.41,1498.66 1371,1402.32 1373.55,1373.68 1413.4,927.301 1417.53,881.773 1371.84,881.773 "/><polygon class="fil3" id="_337847752" points="1023.41,538.593 1023.41,643.899 1023.41,707.731 1023.41,708.146 1432.42,708.146 1432.96,708.146 1436.36,670.034 1444.09,584.08 1448.14,538.593 "/></g></g><rect class="fil4" height="2048" width="2048"/></svg>
