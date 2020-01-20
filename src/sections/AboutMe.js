@@ -28,6 +28,8 @@ function AboutMe(props) {
         <img className="education__logo" src="images/education/Utoronto_coa.svg" alt="University of Toronto logo" />
         <p className="education__description"><b>B.Sc. with Honours in Computer Science and Astrophysics</b>, University of Toronto</p>
       </div>
+      {/* downloads image on initial page load rather than waiting for hover pseudo-class (only works on Firefox) */}
+      <img src="images/fightstick_active.svg" hidden alt="" />
       <div className="fightstick-holder" aria-hidden="true"></div>
     </section>
   );

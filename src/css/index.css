@@ -435,6 +435,10 @@ footer {
   background: url(/images/fightstick.svg) top left no-repeat;
 }
 
+.fightstick-holder:hover {
+  background-image: url(/images/fightstick_active.svg);
+}
+
 .social-media {
   padding: 0;
   font-size: 1.3em;
