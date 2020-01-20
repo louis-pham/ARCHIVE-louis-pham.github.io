@@ -32,16 +32,12 @@ function Skills(props) {
             <span className="skill__label">MongoDB</span>
           </div>
           <div className="skill">
-            <img className="skill__icon skill__icon--medium" src="images/language-icons-svg/java.svg" alt=""/>
-            <span className="skill__label">Java</span>
-          </div>
-          <div className="skill">
             <img className="skill__icon skill__icon--medium" src="images/language-icons-svg/python.svg" alt=""/>
             <span className="skill__label">Python</span>
           </div>
           <div className="skill">
-            <img className="skill__icon skill__icon--medium" src="images/language-icons-svg/bootstrap.svg" alt=""/>
-            <span className="skill__label">Bootstrap</span>
+            <img className="skill__icon skill__icon--medium" src="images/language-icons-svg/java.svg" alt=""/>
+            <span className="skill__label">Java</span>
           </div>
           <div className="skill">
             <img className="skill__icon" src="images/language-icons-svg/react.svg" alt=""/>
@@ -50,6 +46,10 @@ function Skills(props) {
           <div className="skill">
             <img className="skill__icon" src="images/language-icons-svg/jquery.svg" alt=""/>
             <span className="skill__label">jQuery</span>
+          </div>
+          <div className="skill">
+            <img className="skill__icon skill__icon--medium" src="images/language-icons-svg/bootstrap.svg" alt=""/>
+            <span className="skill__label">Bootstrap</span>
           </div>
         </div>
       </div>
