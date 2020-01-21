@@ -30,7 +30,7 @@
 
 .night-mode .navbar {
   background: rgb(0,0,0);
-  background: linear-gradient(173deg, rgba(0,0,0,1) 0%, rgba(11,11,11,0.9612045501794468) 35%, rgba(40,40,40,0.9163866230085784) 100%);
+  background: linear-gradient(10deg, rgba(0,0,0,1) 0%, rgba(11,11,11,0.9612045501794468) 35%, rgba(40,40,40,0.9163866230085784) 100%);
 }
 
 .night-mode .navbar__toggle, .night-mode .navbar__link, .night-mode .navbar__logo, .night-mode .navbar__link:visited, .night-mode .navbar__logo:visited {

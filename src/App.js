@@ -76,7 +76,7 @@ function App() {
         <span onClick={() => setNavbar()} className="navbar__toggle" id="navbar-toggle">
           <i className="fas fa-bars"></i>
         </span>
-        <a href="#intro" className="navbar__logo">Louis Pham</a>
+        <a href="#" className="navbar__logo">Louis Pham</a>
         <ul className={"navbar__main" + (isNavbarActive ? " active" : "")} id="navbar-main">
             <li>
                 <a href="#experience" className="navbar__link">Experience</a>
