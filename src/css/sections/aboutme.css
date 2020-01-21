@@ -1,0 +1,42 @@
+.about-me {
+  position: relative;
+  overflow: hidden;
+}
+
+.education {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: stretch;
+  /* justify-content: flex-start; */
+
+  margin: 10px 0;
+}
+
+.education__logo {
+  /* width: 50px; */
+  height: 50px;
+}
+
+.education__description {
+  padding: 0 10px;
+  flex-grow: 1;
+}
+
+.fightstick-holder {
+  position: absolute;
+  right: -7em;
+  top: -1em;
+  width: 16em;
+  height: 8.75em;
+  padding: 5px 15px;
+  background: #ececec url(/images/fightstick.svg) center no-repeat;
+  background-origin: content-box;
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2), 3px 4px 12px 3px rgba(0, 0, 0, 0.1);
+  transform: rotate(15deg);
+}
+
+.fightstick-holder:hover {
+  background-image: url(/images/fightstick_active.svg);
+}

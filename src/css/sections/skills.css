@@ -1,0 +1,18 @@
+.skills-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-level {
+  margin-bottom: 55px;
+}
+
+.radargraph-holder {
+  position: absolute;
+  right: -3em;
+  top: -3em;
+  width: 16em;
+  height: 15em;
+  background: url(/images/radargraph.svg) top left no-repeat;
+  opacity: 0.2;
+}

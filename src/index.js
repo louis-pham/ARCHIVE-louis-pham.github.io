@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/shared.css';
 import './css/index.css';
+import './css/sections/intro.css';
+import './css/sections/experience.css';
+import './css/sections/sideprojects.css';
+import './css/sections/skills.css';
+import './css/sections/aboutme.css';
+import './css/sections/contactme.css';
 import './css/loading.css';
 import './css/keyframes.css';
 import './css/mediaqueries.css';

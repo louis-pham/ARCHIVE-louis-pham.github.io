@@ -1,0 +1,100 @@
+.experience {
+  padding: var(--vertical-gutter) 0 0 0;
+  display: grid;
+  grid-template-columns: var(--horizontal-gutter) 1fr 1fr var(--horizontal-gutter);
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+  ". header header ."
+  ". . work-item-index ."
+  "work-items work-items work-items work-items";
+  position: relative;
+}
+
+.experience__header {
+  grid-area: header;
+  align-self: end;
+  display: block;
+}
+
+.experience__work-item-index {
+  grid-area: work-item-index;
+  align-self: end;
+  justify-self: end;
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+.work-items {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  grid-area: work-items;
+  display: grid;
+  grid-gap: calc(var(--horizontal-gutter) / 2);
+  grid-template-columns:
+  calc(var(--horizontal-gutter) / 2)
+  repeat(3, calc(100% - 2 * var(--horizontal-gutter)))
+  calc(var(--horizontal-gutter) / 2);
+  grid-template-rows: minmax(150px, 1fr);
+  /* hide scrollbar on FireFox */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* hide scrollbar on Chrome */
+.work-items::-webkit-scrollbar {
+  display: none;
+}
+
+.work-items::before,
+.work-items::after {
+  content: "";
+}
+
+.scroll-button {
+  position: absolute;
+  top: 60%;
+  cursor: pointer;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.scroll-button__previous {
+  left: 25px;
+}
+
+.scroll-button__next {
+  right: 25px;
+}
+
+.work-item {
+  scroll-snap-align: center;
+  margin: 16px 0;
+  padding: 20px 30px;
+  border-left: #bac solid 5px;
+  background: white;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.15), 0 2px 10px 0 rgba(0,0,0,0.06);
+  border-radius: 6px;
+  position: relative;
+  text-align: center;
+}
+
+.work-item:focus {
+  background-color: blue;
+}
+
+.work-item p {
+  font-size: 1.1em;
+  font-weight: normal;
+  color: #6b6b6b;
+  font-style: italic;
+}
+
+.details-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}

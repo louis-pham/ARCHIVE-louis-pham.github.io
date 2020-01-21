@@ -1,0 +1,47 @@
+.social-media {
+  padding: 0;
+  font-size: 1.3em;
+  line-height: 3em;
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+}
+
+.social-media a {
+  font-weight: bold;
+  font-family: 'Helvetica', sans-serif;
+  color: #463c36ad;
+  color: rgba(70, 60, 54, 0.68);
+  text-decoration: none;
+}
+
+.social-media li {
+  display: inline-block;
+  min-width: 5em;
+}
+
+.contact-form {
+  font-family: inherit;
+  text-align: left;
+  padding: 1em 0;
+}
+
+.contact-form input, .contact-form textarea {
+  border-radius: 5px;
+}
+
+.contact-form__submit {
+  background: rgb(255,192,130);
+  background: -webkit-linear-gradient(66deg, rgba(255,192,130,1) 0%, rgba(232,199,234,1) 98%, rgba(227,200,255,1) 100%);
+  background: -o-linear-gradient(66deg, rgba(255,192,130,1) 0%, rgba(232,199,234,1) 98%, rgba(227,200,255,1) 100%);
+  background: linear-gradient(156deg, rgba(255,192,130,1) 0%, rgba(232,199,234,1) 98%, rgba(227,200,255,1) 100%);
+  margin-top: 10px;
+}
+
+.contact-form__submit:hover {
+  background: linear-gradient(156deg, rgba(255,192,130,1) 0%, rgba(232,199,234,1) 50%, rgba(227,200,255,1) 100%)
+}
+
+.contact-form__submit:active {
+  background: rgb(107,90,123);
+}
