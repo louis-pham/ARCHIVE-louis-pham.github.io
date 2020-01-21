@@ -9,10 +9,10 @@
 
 .radargraph-holder {
   position: absolute;
-  right: -3em;
-  top: -3em;
-  width: 16em;
-  height: 15em;
+  right: -15em;
+  top: 9em;
+  width: 35em;
+  height: 34em;
   background: url(/images/radargraph.svg) top left no-repeat;
   opacity: 0.2;
 }

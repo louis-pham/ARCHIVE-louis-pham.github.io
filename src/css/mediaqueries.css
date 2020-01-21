@@ -55,8 +55,10 @@
   }
 
   .radargraph-holder {
-    width: 19em;
-    height: 18em;
+    top: -3em;
+    right: -12em;
+    width: 38em;
+    height: 37em;
   }
 
   .social-media {
@@ -133,10 +135,10 @@
   }
 
   .radargraph-holder {
-    right: -23em;
+    right: -20em;
     top: 2em;
-    width: 39em;
-    height: 38em;
+    width: 43em;
+    height: 42em;
   }
 
   .fightstick-holder {
