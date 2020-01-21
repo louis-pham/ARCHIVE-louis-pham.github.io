@@ -88,6 +88,46 @@
     left: 300px;
   }
 
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 50px;
+    align-items: center;
+  }
+
+  .navbar__main {
+    display: flex;
+    margin-right: 60px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .navbar__main li {
+    margin: 0;
+  }
+
+  .navbar__main li:first-child {
+    margin-top: 0;
+  }
+
+  .navbar__link {
+    padding: 10px;
+  }
+
+  .navbar__logo {
+    margin-top: 0;
+  }
+
+  .navbar__toggle {
+    display: none;
+  }
+
+  .night-mode-toggle {
+    top: 14px;
+    right: 20px;
+  }
+
   .work-item {
     padding: 4em 5em;
   }

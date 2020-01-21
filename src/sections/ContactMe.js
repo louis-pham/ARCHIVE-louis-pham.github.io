@@ -2,7 +2,7 @@ import React from 'react';
 
 function ContactMe(props) {
   return (
-    <section className="contact-me">
+    <section id="contact-me" className="contact-me">
       <h2>Let's get in touch!</h2>
       <form id="contact-form" className="contact-form" action="https://formspree.io/mnqplqqy" method="POST">
         <fieldset>

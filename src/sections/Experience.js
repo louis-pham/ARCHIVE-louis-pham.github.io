@@ -82,7 +82,7 @@ class Experience extends React.Component {
 
   render() {
     return (
-      <section className="experience">
+      <section id="experience" className="experience">
         <span className="experience__header">
           <h2>Experience</h2>
         </span>

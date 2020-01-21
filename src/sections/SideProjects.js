@@ -2,7 +2,7 @@ import React from 'react';
 
 function SideProjects(props) {
   return (
-    <section className="side-projects">
+    <section id="side-projects" className="side-projects">
       <h2>Side Projects</h2>
       <div className="project-item">
         <h3 className="project-item__title">Dance Events <a title="Go to my Dance Events demo page" href="https://dance-events.herokuapp.com/"><i className="fas fa-external-link-alt"></i></a></h3>

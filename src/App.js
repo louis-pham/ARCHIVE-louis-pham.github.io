@@ -12,11 +12,17 @@ import "regenerator-runtime/runtime";
 function App() {
   const [nightModeOn, toggleNightMode] = useState(false);
   const [isLoading, toggleLoading] = useState(true);
+  const [isNavbarActive, toggleNavbar] = useState(false);
 
   let setNightMode = () => {
     let newValue = !nightModeOn;
     toggleNightMode(newValue);
     Cookies.set("night-mode", newValue, {expires: 1});
+  };
+
+  let setNavbar = () => {
+    let newValue = !isNavbarActive;
+    toggleNavbar(newValue);
   };
 
   let hideElement = (e) => {
@@ -64,8 +70,32 @@ function App() {
         </div>
         <div className="loading__bottom-border"></div>
       </div>
-      <span className="animated fadeInRight night-mode-toggle" onClick={() => setNightMode()}><i className="fas fa-lightbulb fa-3x"></i></span>
       <Intro isLoading={isLoading} />
+      <nav className="navbar">
+        <span className="animated fadeInRight night-mode-toggle" onClick={() => setNightMode()}><i className="fas fa-lightbulb fa-lg"></i></span>
+        <span onClick={() => setNavbar()} className="navbar__toggle" id="navbar-toggle">
+          <i className="fas fa-bars"></i>
+        </span>
+        <a href="#intro" className="navbar__logo">Louis Pham</a>
+        <ul className={"navbar__main" + (isNavbarActive ? " active" : "")} id="navbar-main">
+            <li>
+                <a href="#experience" className="navbar__link">Experience</a>
+            </li>
+            <li>
+                <a href="#side-projects" className="navbar__link">Side Projects</a>
+            </li>
+            <li>
+                <a href="#skills" className="navbar__link">Skills</a>
+            </li>
+            <li>
+                <a href="#about-me" className="navbar__link">About Me</a>
+            </li>
+            <li>
+                <a href="#contact-me" className="navbar__link">Contact Me</a>
+            </li>
+
+        </ul>
+      </nav>
       <Experience />
       <SideProjects />
       <Skills />

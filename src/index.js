@@ -9,8 +9,8 @@ import './css/sections/aboutme.css';
 import './css/sections/contactme.css';
 import './css/loading.css';
 import './css/keyframes.css';
-import './css/mediaqueries.css';
 import './css/nightmode.css';
+import './css/mediaqueries.css';
 import App from './App.js';
 import * as serviceWorker from './serviceWorker';
 

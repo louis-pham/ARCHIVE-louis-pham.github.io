@@ -2,7 +2,7 @@ import React from 'react';
 
 function AboutMe(props) {
   return (
-    <section className="about-me">
+    <section id="about-me" className="about-me">
       <h2>About Me</h2>
       {/* downloads image on initial page load rather than waiting for hover pseudo-class (only works on Firefox) */}
       <img src="images/fightstick_active.svg" hidden alt="" />
