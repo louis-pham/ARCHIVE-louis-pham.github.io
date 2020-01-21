@@ -21,3 +21,7 @@
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.15), 0 2px 10px 0 rgba(0,0,0,0.06);
   margin: auto;
 }
+
+.project-item__image:hover {
+  box-shadow: 3px 3px 5px 1px rgba(0,0,0,0.07), 4px 4px 7px 3px rgba(0,0,0,0.03);
+}
