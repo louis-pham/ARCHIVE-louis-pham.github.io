@@ -14,7 +14,7 @@ function AboutMe(props) {
         I'm a full-stack developer who loves <b>creating</b>. I enjoy working on all sorts of projects to expand my knowledge, using my development skills together with a drive to learn new things, empathy towards user experience, and some creative muscle honed through art.
       </p>
       <p>
-        I have around <b>2 years of experience</b> in software development in a professional setting, where I've built products both large and small, and for just a few users to hundreds. After graduation, I spent <b>2 years teaching English in Japan</b> exploring and learning about new cultures, languages, places, people, and even myself.
+        I have around <b>2 years of software development experience</b> where I've built products both large and small, and for just a few users to hundreds. After graduation, I spent <b>2 years teaching English in Japan</b> exploring and learning about new cultures, languages, places, people, and even myself.
       </p>
       <p>
         Outside of work and studying, my spare time is taken up with <b>dancing</b>, video games, and going down YouTube rabbit holes.

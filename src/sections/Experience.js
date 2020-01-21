@@ -86,7 +86,6 @@ class Experience extends React.Component {
         <span className="experience__header">
           <h2>Experience</h2>
         </span>
-        <span className="experience__work-item-index">{this.state.itemInView + 1} of 3</span>
         <span className={"scroll-button scroll-button__previous" + this.toggleScrollButton("L")} onClick={() => this.doScroll("L")}><i className="fas fa-7x fa-chevron-left"></i></span>
         <span className={"scroll-button scroll-button__next" + this.toggleScrollButton("R")} onClick={() => this.doScroll("R")}><i className="fas fa-7x fa-chevron-right"></i></span>
         <div className="work-items" ref={this.workItemsRef}>
@@ -103,6 +102,12 @@ class Experience extends React.Component {
             })
           }
         </div>
+        <div className="circle-indicators" aria-hidden="true">
+          <i className={(this.state.itemInView === 0 ? "fas" : "far") + " fa-circle"}></i>&nbsp;
+          <i className={(this.state.itemInView === 1 ? "fas" : "far") + " fa-circle"}></i>&nbsp;
+          <i className={(this.state.itemInView === 2 ? "fas" : "far") + " fa-circle"}></i>
+        </div>
+        <span className="experience__work-item-index" aria-hidden="true">{this.state.itemInView + 1} of 3</span>
       </section>
     );
   }

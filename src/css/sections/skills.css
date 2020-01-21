@@ -8,6 +8,7 @@
 }
 
 .radargraph-holder {
+  z-index: -1;
   position: absolute;
   right: -15em;
   top: 9em;

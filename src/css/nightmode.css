@@ -37,11 +37,6 @@
   color: white;
 }
 
-.night-mode .navbar__main li:hover {
-  background-color: #151515;
-  box-shadow: inset -5px 0 0 #000000, inset 5px 0 0 #000000;
-}
-
 .night-mode .work-item {
   border-left: #50366b solid 5px;
   background: #252525;
@@ -49,6 +44,10 @@
 
 .night-mode .scroll-button {
   background-color: rgba(255,255,255,0.1);
+}
+
+.night-mode .circle-indicators {
+  color: white;
 }
 
 .night-mode .social-media a {

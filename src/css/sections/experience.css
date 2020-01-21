@@ -1,12 +1,12 @@
 .experience {
-  padding: var(--vertical-gutter) 0 0 0;
+  padding: var(--vertical-gutter) 0;
   display: grid;
-  grid-template-columns: var(--horizontal-gutter) 1fr 1fr var(--horizontal-gutter);
-  grid-template-rows: auto auto auto;
+  grid-template-columns: var(--horizontal-gutter) 1fr 1fr 1fr var(--horizontal-gutter);
+  grid-template-rows: repeat(3, auto);
   grid-template-areas:
-  ". header header ."
-  ". . work-item-index ."
-  "work-items work-items work-items work-items";
+  ". header header header ."
+  "work-items work-items work-items work-items work-items"
+  ". . indicators work-item-index .";
   position: relative;
 }
 
@@ -18,9 +18,9 @@
 
 .experience__work-item-index {
   grid-area: work-item-index;
-  align-self: end;
-  justify-self: end;
-  font-size: 1.7em;
+  align-self: center;
+  justify-self: flex-end;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
@@ -97,4 +97,13 @@
   top: 15px;
   right: 15px;
   cursor: pointer;
+}
+
+.circle-indicators {
+  grid-area: indicators;
+  align-self: center;
+  justify-self: center;
+  font-size: 1.6em;
+  color: black;
+  color: rgba(0,0,0,0.8);
 }
