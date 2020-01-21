@@ -1,10 +1,10 @@
 import React from 'react';
 
 const WI1 = {
-  company: "CITA Summer Undergraduate Research Program",
+  company: "Canadian Institute for Theoretical Astrophysics",
   jobTitle: "Researcher",
   jobDuration: "October 2016 - August 2017",
-  jobSummary: "It was my responsibility to develop the software and tools for the rest of the team to investigate weak gravitational lensing in the Cosmic Infrared Background.",
+  jobSummary: "As part of the Summer Undergraduate Research Program, it was my responsibility to develop the software and tools for the rest of the team to investigate weak gravitational lensing in the Cosmic Infrared Background.",
   jobDescription:
   <ul>
     <li>

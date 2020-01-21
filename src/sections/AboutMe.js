@@ -4,6 +4,9 @@ function AboutMe(props) {
   return (
     <section className="about-me">
       <h2>About Me</h2>
+      {/* downloads image on initial page load rather than waiting for hover pseudo-class (only works on Firefox) */}
+      <img src="images/fightstick_active.svg" hidden alt="" />
+      <div className="fightstick-holder" aria-hidden="true"></div>
       <p>
         Born in Toronto, Canada, I graduated from the University of Toronto with an Honours Bachelor of Science degree in <b>Computer Science</b> and <b>Astronomy & Astrophysics</b>.
       </p>
@@ -28,9 +31,6 @@ function AboutMe(props) {
         <img className="education__logo" src="images/education/Utoronto_coa.svg" alt="University of Toronto logo" />
         <p className="education__description"><b>B.Sc. with Honours in Computer Science and Astrophysics</b>, University of Toronto</p>
       </div>
-      {/* downloads image on initial page load rather than waiting for hover pseudo-class (only works on Firefox) */}
-      <img src="images/fightstick_active.svg" hidden alt="" />
-      <div className="fightstick-holder" aria-hidden="true"></div>
     </section>
   );
 }

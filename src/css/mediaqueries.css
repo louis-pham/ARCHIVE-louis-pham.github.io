@@ -7,18 +7,23 @@
   }
 }
 
-@media screen and (min-width: 350px){
-  .container {
-    font-size: 1em;
-  }
-}
-
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 450px){
   :root {
     --vertical-gutter: 3em;
     --horizontal-gutter: 4em;
   }
 
+  .container {
+    font-size: 1em;
+  }
+
+  .education__logo {
+    /* width: 75px; */
+    height: 75px;
+  }
+}
+
+@media screen and (min-width: 600px) {
   .intro__moon {
     bottom: 1em;
     left: 23em;
@@ -57,11 +62,17 @@
   .social-media {
     font-size: 1.9em;
   }
+
+  .fightstick-holder {
+    width: 19em;
+    height: 10.75em;
+    right: -4em;
+  }
 }
 
 @media screen and (min-width: 800px) {
   :root {
-    --vertical-gutter: 5em;
+    --vertical-gutter: 6.5em;
     --horizontal-gutter: 8em;
   }
 
@@ -154,6 +165,7 @@
   .fightstick-holder {
     right: 3em;
     top: 2em;
+    transform: rotate(8deg);
   }
 
   @supports (display: grid) {
@@ -219,6 +231,7 @@
   }
 
   .fightstick-holder {
+    top: 1em;
     right: 3em;
     width: 29em;
     height: 15.75em;
@@ -250,12 +263,5 @@ _:-ms-lang(x), .scroll-button {
   .radargraph-holder {
     right: 4em;
     top: 7em;
-  }
-
-  .fightstick-holder {
-    right: 2em;
-    top: 0em;
-    width: 36em;
-    height: 19.75em;
   }
 }

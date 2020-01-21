@@ -7,7 +7,7 @@ function Intro(props) {
       <div className="intro__heatpipe" aria-hidden="true"></div>
       <div className={"intro__moon"} aria-hidden="true"></div>
       <h1 className="intro__name animated"><span>Louis<br />Pham</span></h1>
-      <div className="intro__title animated">Front-end developer.</div>
+      <div className="intro__title animated">Full-stack developer.</div>
     </section>
   );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './css/shared.css';
 import './css/index.css';
 import './css/loading.css';
 import './css/keyframes.css';
