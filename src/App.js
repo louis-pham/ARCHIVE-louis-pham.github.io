@@ -6,6 +6,7 @@ import Skills from './sections/Skills.js';
 import AboutMe from './sections/AboutMe.js';
 import ContactMe from './sections/ContactMe.js';
 import Cookies from 'js-cookie';
+import Scrollspy from 'react-scrollspy'
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 
@@ -77,31 +78,34 @@ function App() {
           <i className="fas fa-bars"></i>
         </span>
         <a href="#" className="navbar__logo">Louis Pham</a>
-        <ul className={"navbar__main" + (isNavbarActive ? " active" : "")} id="navbar-main">
-            <li>
-                <a href="#experience" className="navbar__link">Experience</a>
-            </li>
-            <li>
-                <a href="#side-projects" className="navbar__link">Side Projects</a>
-            </li>
-            <li>
-                <a href="#skills" className="navbar__link">Skills</a>
-            </li>
-            <li>
-                <a href="#about-me" className="navbar__link">About Me</a>
-            </li>
-            <li>
-                <a href="#contact-me" className="navbar__link">Contact Me</a>
-            </li>
-
-        </ul>
+        <Scrollspy items={ ['intro', 'experience', 'side-projects', 'skills', 'about-me', 'contact-me'] } currentClassName="is-current" offset={-100} className={"navbar__main" + (isNavbarActive ? " active" : "")} id="navbar-main">
+          <li className="hidden">
+            <a href="#intro" className="navbar__link"></a>
+          </li>
+          <li>
+              <a href="#experience" className="navbar__link">Experience</a>
+          </li>
+          <li>
+              <a href="#side-projects" className="navbar__link">Side Projects</a>
+          </li>
+          <li>
+              <a href="#skills" className="navbar__link">Skills</a>
+          </li>
+          <li>
+              <a href="#about-me" className="navbar__link">About Me</a>
+          </li>
+          <li>
+              <a href="#contact-me" className="navbar__link">Contact Me</a>
+          </li>
+        </Scrollspy>
       </nav>
-      <Experience />
-      <SideProjects />
-      <Skills />
-      <AboutMe />
-      <ContactMe />
+        <Experience />
+        <SideProjects />
+        <Skills />
+        <AboutMe />
+        <ContactMe />
       <footer className=""><span id="copyright">©<span id="copyright-year">2020</span> Louis Pham</span></footer>
+
     </div>
   );
 }
