@@ -108,7 +108,11 @@
     margin-right: 75px;
     flex-direction: row;
     justify-content: flex-end;
-    border-bottom: none;;
+    border-bottom: none;
+  }
+
+  .night-mode .navbar__main {
+    border-bottom: none;
   }
 
   .navbar__main li {
