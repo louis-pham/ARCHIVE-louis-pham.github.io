@@ -2,7 +2,7 @@
   position: relative;
   padding: 20vh var(--horizontal-gutter);
   min-height: 200px;
-  background: rgb(245, 245, 245) url(/images/grid.svg);
+  background: rgb(245, 245, 245) url(/images/assets/grid.svg);
   background-attachment: fixed;
   overflow: hidden;
 }
@@ -13,7 +13,7 @@
   left: 200px;
   height: 800px;
   width: 800px;
-  background: url(/images/heatpipe.svg) top left no-repeat;
+  background: url(/images/assets/heatpipe.svg) top left no-repeat;
   transform: rotateZ(-10deg);
 }
 
@@ -23,7 +23,7 @@
   left: 13em;
   height: 250px;
   width: 250px;
-  background: url(/images/moon.svg) top left no-repeat;
+  background: url(/images/assets/moon.svg) top left no-repeat;
   transition: bottom,right,height,width 1s ease-in-out;
 }
 

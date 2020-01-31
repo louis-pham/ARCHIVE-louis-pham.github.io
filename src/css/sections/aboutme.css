@@ -30,7 +30,7 @@
   width: 16em;
   height: 8.75em;
   padding: 5px 15px;
-  background: #ececec url(/images/fightstick.svg) center no-repeat;
+  background: #ececec url(/images/assets/fightstick.svg) center no-repeat;
   background-origin: content-box;
   border-radius: 20px;
   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2), 3px 4px 12px 3px rgba(0, 0, 0, 0.1);
@@ -38,5 +38,5 @@
 }
 
 .fightstick-holder:hover {
-  background-image: url(/images/fightstick_active.svg);
+  background-image: url(/images/assets/fightstick_active.svg);
 }

@@ -23,8 +23,11 @@ function Skills(props) {
             <img className="skill__icon" src="images/language-icons-svg/nodejs-seeklogo.com.svg" alt=""/>
             <span className="skill__label">Node.js</span>
           </div>
+          <div className="skill">
+            <img className="skill__icon skill__icon--medium" src="images/language-icons-svg/python.svg" alt=""/>
+            <span className="skill__label">Python</span>
+          </div>
         </div>
-
         <div className="skill-level">
           <h3>Working Knowledge</h3>
           <div className="skill">
@@ -32,8 +35,12 @@ function Skills(props) {
             <span className="skill__label">MongoDB</span>
           </div>
           <div className="skill">
-            <img className="skill__icon skill__icon--medium" src="images/language-icons-svg/python.svg" alt=""/>
-            <span className="skill__label">Python</span>
+            <img className="skill__icon" src="images/language-icons-svg/PostgreSQL_logo.3colors.svg" alt=""/>
+            <span className="skill__label">PostgreSQL</span>
+          </div>
+          <div className="skill">
+            <img className="skill__icon" src="images/language-icons-svg/django-logo-positive.svg" alt=""/>
+            <span className="skill__label">Django</span>
           </div>
           <div className="skill">
             <img className="skill__icon skill__icon--medium" src="images/language-icons-svg/java.svg" alt=""/>
