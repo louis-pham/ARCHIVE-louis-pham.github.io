@@ -5,6 +5,13 @@ function SideProjects(props) {
     <section id="side-projects" className="side-projects">
       <h2>Side Projects</h2>
       <div className="project-item">
+        <h3 className="project-item__title">IoU2 <a title="Go to my IoU2 demo page" href="https://iou2.herokuapp.com/"><i className="fas fa-external-link-alt"></i></a></h3>
+        <img className="project-item__image" alt="" src="images/side-projects/iou2.png"/>
+        <p className="project-item__description">
+          Full-stack budgeting tracker built with <b>Python</b>, <b>Django</b>, <b>PostgreSQL</b>, <b>Materialize</b>, <b>JavaScript/jQuery</b> and <b>Amazon S3</b>.
+        </p>
+      </div>
+      <div className="project-item">
         <h3 className="project-item__title">Dance Events <a title="Go to my Dance Events demo page" href="https://dance-events.herokuapp.com/"><i className="fas fa-external-link-alt"></i></a></h3>
         <img className="project-item__image" alt="" src="images/side-projects/dance-events.png"/>
         <p className="project-item__description">
