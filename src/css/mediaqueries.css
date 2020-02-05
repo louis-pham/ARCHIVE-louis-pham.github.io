@@ -141,7 +141,7 @@
   }
 
   .project-item > .project-item__image {
-    flex: 0 1 0;
+    flex: 0 1 285px;
     margin-right: 25px;
   }
 
@@ -198,7 +198,7 @@
   }
 
   .project-item > .project-item__image {
-    max-width: 350px;
+    flex-basis: 350px;
   }
 
   .radargraph-holder {
