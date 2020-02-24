@@ -71,39 +71,47 @@ function App() {
         </div>
         <div className="loading__bottom-border"></div>
       </div>
-      <Intro isLoading={isLoading} />
       <nav className="navbar">
-        <span className="animated fadeInRight night-mode-toggle" onClick={() => setNightMode()}><i className="fas fa-lightbulb fa-lg"></i></span>
-        <span onClick={() => setNavbar()} className="navbar__toggle" id="navbar-toggle">
-          <i className="fas fa-bars"></i>
-        </span>
-        <a href="#" className="navbar__logo">Louis Pham</a>
-        <Scrollspy items={ ['intro', 'experience', 'side-projects', 'skills', 'about-me', 'contact-me'] } currentClassName="is-current" offset={-100} className={"navbar__main" + (isNavbarActive ? " active" : "")} id="navbar-main">
-          <li className="hidden">
-            <a href="#intro" className="navbar__link"></a>
-          </li>
-          <li>
-              <a href="#experience" className="navbar__link">Experience</a>
-          </li>
-          <li>
-              <a href="#side-projects" className="navbar__link">Side Projects</a>
-          </li>
-          <li>
-              <a href="#skills" className="navbar__link">Skills</a>
-          </li>
-          <li>
-              <a href="#about-me" className="navbar__link">About Me</a>
-          </li>
-          <li>
-              <a href="#contact-me" className="navbar__link">Contact Me</a>
-          </li>
-        </Scrollspy>
+        <div className="navbar-wrapper">
+          <a href="#" className="navbar__logo">
+            Louis Pham
+            <img src="/images/assets/moon.svg" />
+          </a>
+          <div className="navbar-controls">
+            <span className="animated fadeInRight night-mode-toggle" onClick={() => setNightMode()}><i className="fas fa-lightbulb fa-md"></i></span>
+            <span onClick={() => setNavbar()} className="navbar__toggle" id="navbar-toggle">
+              <i className="fas fa-bars"></i>
+            </span>
+          </div>
+          <Scrollspy items={ ['intro', 'experience', 'side-projects', 'skills', 'about-me', 'contact-me'] } currentClassName="is-current" offset={-100} className={"navbar__main" + (isNavbarActive ? " active" : "")} id="navbar-main">
+            <li className="hidden">
+              <a href="#intro" className="navbar__link"></a>
+            </li>
+            <li>
+                <a href="#experience" className="navbar__link">Experience</a>
+            </li>
+            <li>
+                <a href="#side-projects" className="navbar__link">Side Projects</a>
+            </li>
+            <li>
+                <a href="#skills" className="navbar__link">Skills</a>
+            </li>
+            <li>
+                <a href="#about-me" className="navbar__link">About Me</a>
+            </li>
+            <li>
+                <a href="#contact-me" className="navbar__link">Contact Me</a>
+            </li>
+            <span className="animated fadeInRight night-mode-toggle" onClick={() => setNightMode()}><i className="fas fa-lightbulb fa-md"></i></span>
+          </Scrollspy>
+        </div>
       </nav>
-        <Experience />
-        <SideProjects />
-        <Skills />
-        <AboutMe />
-        <ContactMe />
+      <Intro isLoading={isLoading} />
+      <Experience />
+      <SideProjects />
+      <Skills />
+      <AboutMe />
+      <ContactMe />
       <footer className=""><span id="copyright">©<span id="copyright-year">2020</span> Louis Pham</span></footer>
 
     </div>

@@ -105,12 +105,28 @@
     align-items: center;
   }
 
+  .navbar-controls {
+    display: none;
+  }
+
   .navbar__main {
     display: flex;
-    margin-right: 75px;
     flex-direction: row;
     justify-content: flex-end;
     border-bottom: none;
+    min-width: 577px;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 8px 55px 8px 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .navbar .navbar__main .night-mode-toggle {
+    display: block;
+    position: absolute;
+    top: 14px;
   }
 
   .night-mode .navbar__main {
@@ -188,7 +204,7 @@
   }
 
   .social-media {
-    font-size: 2.8em;
+    font-size: 2.1em;
   }
 }
 
