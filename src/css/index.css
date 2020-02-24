@@ -130,10 +130,17 @@ ul {
   margin-left: 10px;
 }
 
+.navbar__toggle, .night-mode-toggle {
+  padding: 5px;
+  border-radius: 5px;
+  transition: box-shadow 0.07s ease-in-out;
+}
+
+.navbar__toggle:hover, .night-mode-toggle:hover {
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.4);
+}
+
 .navbar__toggle {
-  /* position: absolute;
-  top: 18px;
-  right: 20px; */
   cursor: pointer;
   color: rgba(0, 0, 0, 0.3);
   font-size: 24px;
@@ -191,10 +198,15 @@ ul {
 .navbar__main li {
   text-align: center;
   letter-spacing: 1px;
+  margin-top: 5px;
 }
 
 .navbar__main li:first-child {
   display: none;
+}
+
+.navbar__main li:nth-child(2) {
+  margin-top: 0;
 }
 
 .navbar .navbar__main li:hover {

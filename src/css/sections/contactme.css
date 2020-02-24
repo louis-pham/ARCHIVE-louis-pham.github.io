@@ -9,10 +9,14 @@
 
 .social-media a {
   font-weight: bold;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #463c36ad;
   color: rgba(70, 60, 54, 0.68);
   text-decoration: none;
+}
+
+.social-media a:hover {
+  color: #2c2c52;
 }
 
 .social-media li {

@@ -14,7 +14,7 @@ function ContactMe(props) {
       </form>
       <ul className="social-media">
         <li className="resume-link animated bounceInDown">
-          <a href="files/Louis Pham - Resume.pdf" target="_blank" rel="noopener noreferrer"><i className="fas fa-file-pdf"></i> RESUMÉ</a>
+          <a href="files/Louis Pham - Resume.pdf" target="_blank" rel="noopener noreferrer"><i className="fas fa-file-pdf"></i> Resumé</a>
         </li>
         <li className="github-link animated bounceInDown">
           <a title="Go to my GitHub" href="https://github.com/louis-pham" target="_blank" rel="noopener noreferrer"><i className="fab fa-github fa-lg"></i></a>

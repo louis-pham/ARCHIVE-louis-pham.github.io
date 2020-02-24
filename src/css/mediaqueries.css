@@ -114,7 +114,7 @@
     flex-direction: row;
     justify-content: flex-end;
     border-bottom: none;
-    min-width: 577px;
+    min-width: 602px;
     top: 0;
     right: 0;
     margin: 0;
@@ -126,7 +126,7 @@
   .navbar .navbar__main .night-mode-toggle {
     display: block;
     position: absolute;
-    top: 14px;
+    top: 11px;
   }
 
   .night-mode .navbar__main {
@@ -135,6 +135,7 @@
 
   .navbar__main li {
     margin: 0;
+    margin-right: 5px;
     align-self: stretch;
   }
 
@@ -155,7 +156,7 @@
   }
 
   .night-mode-toggle {
-    right: 25px;
+    right: 23px;
   }
 
   .work-item {

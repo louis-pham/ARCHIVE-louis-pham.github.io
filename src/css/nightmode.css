@@ -71,6 +71,10 @@
   color: rgba(255, 255, 255, 0.68);
 }
 
+.night-mode .social-media a:hover {
+  color: white;
+}
+
 .night-mode fieldset input,.night-mode fieldset textarea {
   background-color: #14151b;
   color: #bebebe;
