@@ -216,7 +216,7 @@
 
   .intro__moon {
     bottom: 0em;
-    left: 33em;
+    left: 35em;
     height: 600px;
     width: 600px;
   }
@@ -356,7 +356,7 @@ _:-ms-lang(x), .scroll-button {
   .intro__moon {
     bottom: -10em;
     left: unset;
-    right: 20em;
+    right: 11em;
     height: 700px;
     width: 700px;
   }

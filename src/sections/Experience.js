@@ -62,15 +62,20 @@ class Experience extends React.Component {
     if (!ISIEBROWSER) {
       let itemToScrollTo = null;
       let scrollByY = 0;
-      if (side === "L") {
-        itemToScrollTo = this.state.itemInView - 1;
-      } else if (side === "R") {
-        itemToScrollTo = this.state.itemInView + 1;
+      if (typeof side === "string") {
+        if (side === "L") {
+          itemToScrollTo = this.state.itemInView - 1;
+        } else if (side === "R") {
+          itemToScrollTo = this.state.itemInView + 1;
+        }
+      } else {
+        itemToScrollTo = side;
       }
 
       if (itemToScrollTo < this.singleWorkItemRefs.length && itemToScrollTo >= 0) {
-        scrollByY = this.singleWorkItemRefs[itemToScrollTo].ref.current.clientWidth;
-        scrollByY = side === "L" ? -scrollByY : scrollByY;
+        scrollByY = this.singleWorkItemRefs[itemToScrollTo].ref.current.offsetWidth;
+        scrollByY = side === "L" || side < this.state.itemInView ? -scrollByY : scrollByY;
+        if (typeof side === "number") scrollByY = scrollByY * Math.abs(this.state.itemInView - side);
         this.workItemsRef.current.scrollBy({top: 0, left: scrollByY, behavior: "smooth"});
       }
     }
@@ -99,9 +104,9 @@ class Experience extends React.Component {
           }
         </div>
         <div className="circle-indicators" aria-hidden="true">
-          <i className={(this.state.itemInView === 0 ? "fas" : "far") + " fa-circle"}></i>&nbsp;
-          <i className={(this.state.itemInView === 1 ? "fas" : "far") + " fa-circle"}></i>&nbsp;
-          <i className={(this.state.itemInView === 2 ? "fas" : "far") + " fa-circle"}></i>
+          <i className={(this.state.itemInView === 0 ? "fas" : "far") + " fa-circle"} onClick={() => this.doScroll(0)}></i>&nbsp;
+          <i className={(this.state.itemInView === 1 ? "fas" : "far") + " fa-circle"} onClick={() => this.doScroll(1)}></i>&nbsp;
+          <i className={(this.state.itemInView === 2 ? "fas" : "far") + " fa-circle"} onClick={() => this.doScroll(2)}></i>
         </div>
         <span className="experience__work-item-index" aria-hidden="true">{this.state.itemInView + 1} of 3</span>
       </section>
