@@ -3,11 +3,7 @@ import WorkItem from './WorkItem.js';
 import WI1 from './work_items/WI1.jsx';
 import WI2 from './work_items/WI2.jsx';
 import WI3 from './work_items/WI3.jsx';
-// import smoothscroll from 'smoothscroll-polyfill';
-// import scrollSnapPolyfill from 'css-scroll-snap-polyfill'
 
-// smoothscroll.polyfill();
-// scrollSnapPolyfill();
 let parser = require('ua-parser-js');
 let ua = parser();
 const WORKITEMS = [WI1, WI2, WI3];
@@ -19,7 +15,7 @@ class Experience extends React.Component {
     super(props);
     this.state = {
       itemInView: 0,
-      prevIntersectionRatios: [0,0,0],
+      prevIntersectionRatios: [0,0,0]
     }
     this.workItemsRef = React.createRef();
     this.singleWorkItemRefs = WORKITEMS.map((elem, i) => {

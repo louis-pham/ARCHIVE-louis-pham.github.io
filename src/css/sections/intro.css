@@ -19,18 +19,34 @@
 
 .intro__moon {
   position: absolute;
-  bottom: -5em;
-  left: 13em;
+  bottom: 8em;
+  left: 16em;
   height: 250px;
   width: 250px;
   background: url(/images/assets/moon.svg) top left no-repeat;
-  transition: bottom,right,height,width 1s ease-in-out;
+  transition: bottom,right,left,height,width 1s ease-in-out;
+}
+
+.intro__tag {
+  position: absolute;
+  bottom: -3em;
+  left: 1em;
+  height: 150px;
+  width: 150px;
+  background: url(/images/assets/tag.svg) top left no-repeat;
+  transition: bottom,right,left,height,width 1s ease-in-out;
 }
 
 .intro--loading-done > .intro__moon {
   -webkit-animation: fadeInUp 1.7s 1s ease-out, float 7s ease-in-out 3s infinite;
   -moz-animation: fadeInUp 1.7s 1s ease-out, float 7s ease-in-out 1.7s infinite;
   animation: fadeInUp 2s 1s ease-out, float 7s ease-in-out 3s infinite;
+}
+
+.intro--loading-done > .intro__tag {
+  -webkit-animation: fadeIn 2s 1.4s ease-out;
+  -moz-animation: fadeIn 2s 1.4s ease-out;
+  animation: fadeIn 2s 1.4s ease-out;
 }
 
 .intro__name {
@@ -54,9 +70,11 @@
   display: block;
   margin: 1em 0;
   font-size: 1.6em;
-  font-weight: bold;
-  color: #848484;
+  color: #6b6b6b;
   opacity: 0;
+  line-height: 1.6em;
+  width: 30%;
+  font-weight: lighter;
 }
 
 .intro--loading-done > .intro__title {

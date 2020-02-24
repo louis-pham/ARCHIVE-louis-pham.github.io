@@ -11,13 +11,13 @@ const WI3 = {
       <b>Projects</b>
       <ul>
         <li>
-          <a title="Go to InfoScribe" href="https://infoscribe.infoway-inforoute.ca">InfoScribe</a>
+          <a title="Go to InfoScribe" href="https://infoscribe.infoway-inforoute.ca" target="_blank" rel="noopener noreferrer">InfoScribe</a>
         </li>
         <li>
           digital mockups
             <ul>
-              <li><a title="Go to the Clinical Requirements digital mockup" href="https://infocentral.infoway-inforoute.ca/extra/ca/clinical-requirements/html/start.html">clinical requirements</a></li>
-              <li><a title="Go to the Interoperability Specification digital mockup" href="https://infocentral.infoway-inforoute.ca/extra/ca/interoperability-spec/html/start.html">specification</a></li>
+              <li><a title="Go to the Clinical Requirements digital mockup" href="https://infocentral.infoway-inforoute.ca/extra/ca/clinical-requirements/html/start.html" target="_blank" rel="noopener noreferrer">clinical requirements</a></li>
+              <li><a title="Go to the Interoperability Specification digital mockup" href="https://infocentral.infoway-inforoute.ca/extra/ca/interoperability-spec/html/start.html" target="_blank" rel="noopener noreferrer">specification</a></li>
             </ul>
         </li>
         <li>

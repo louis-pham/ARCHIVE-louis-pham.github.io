@@ -6,6 +6,9 @@
 .night-mode a {
   color: #adf;
 }
+.night-mode .striped-border {
+  border-color: #383838;
+}
 
 .night-mode a:visited {
   color: #bac;
@@ -27,6 +30,14 @@
 
 .night-mode .intro__wrapper {
   background-color: black;
+}
+
+.night-mode .intro__tag {
+  background-image: url(/images/assets/tag_white.svg);
+}
+
+.night-mode .intro__title {
+  color: #a4a4a4;
 }
 
 .night-mode .navbar {

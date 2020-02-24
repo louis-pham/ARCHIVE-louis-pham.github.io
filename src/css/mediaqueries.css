@@ -13,6 +13,18 @@
     --horizontal-gutter: 4em;
   }
 
+  .intro__moon {
+    height: 350px;
+    width: 350px;
+  }
+
+  .intro__tag {
+    bottom: -3em;
+    left: 3em;
+    height: 200px;
+    width: 200px;
+  }
+
   .container {
     font-size: 1em;
   }
@@ -24,10 +36,10 @@
 
 @media screen and (min-width: 600px) {
   .intro__moon {
-    bottom: 1em;
-    left: 23em;
-    height: 350px;
-    width: 350px;
+    bottom: 3em;
+    left: 19em;
+    height: 400px;
+    width: 400px;
   }
 
   .work-item {
@@ -64,7 +76,7 @@
   }
 
   .intro__moon {
-    bottom: -4em;
+    bottom: 5em;
     left: 25em;
     height: 450px;
     width: 450px;
@@ -73,6 +85,11 @@
   .intro__heatpipe {
     top: -675px;
     left: 300px;
+  }
+
+  .intro__tag {
+    bottom: -1em;
+    left: 7em;
   }
 
   .navbar {
@@ -149,6 +166,15 @@
     flex: 1 1 0;
   }
 
+  .small-projects .project-item > .project-item__title {
+    flex: 1 1;
+  }
+
+  .small-projects .project-item > .project-item__image {
+    margin: 0 auto;
+    flex: 1 1;
+  }
+
   .radargraph-holder {
     right: -20em;
     top: 2em;
@@ -172,10 +198,10 @@
   }
 
   .intro__moon {
-    bottom: -5em;
-    left: 35em;
-    height: 500px;
-    width: 500px;
+    bottom: 0em;
+    left: 33em;
+    height: 600px;
+    width: 600px;
   }
 
   .intro__heatpipe {
@@ -183,6 +209,10 @@
     left: 500px;
     height: 900px;
     width: 900px;
+  }
+
+  .intro__tag {
+    left: 12em;
   }
 
   .details-toggle {
@@ -199,6 +229,11 @@
 
   .project-item > .project-item__image {
     flex-basis: 350px;
+  }
+
+  .small-projects {
+    grid-template-columns: repeat(3, auto);
+    align-items: start;
   }
 
   .radargraph-holder {
@@ -259,10 +294,8 @@
   }
 
   .intro__moon {
-    bottom: -13em;
+    bottom: -4em;
     left: 39em;
-    height: 650px;
-    width: 650px;
   }
 
   .intro__heatpipe {
@@ -270,6 +303,10 @@
     left: 650px;
     height: 1000px;
     width: 1000px;
+  }
+
+  .intro__tag {
+    left: 18em;
   }
 
   .radargraph-holder {
@@ -301,7 +338,8 @@ _:-ms-lang(x), .scroll-button {
 @media screen and (min-width: 1600px) {
   .intro__moon {
     bottom: -10em;
-    left: 51em;
+    left: unset;
+    right: 20em;
     height: 700px;
     width: 700px;
   }

@@ -4,12 +4,17 @@ function Skills(props) {
   return (
     <section id="skills" className="skills-section">
       <h2>Skills</h2>
+      <div className="radargraph-holder" aria-hidden="true"></div>
       <div>
         <div className="skill-level">
           <h3>Strong</h3>
           <div className="skill">
             <img className="skill__icon" src="images/language-icons-svg/javascript.svg" alt=""/>
             <span className="skill__label">JavaScript</span>
+          </div>
+          <div className="skill">
+            <img className="skill__icon" src="images/language-icons-svg/react.svg" alt=""/>
+            <span className="skill__label">React</span>
           </div>
           <div className="skill">
             <img className="skill__icon" src="images/language-icons-svg/html5.svg" alt=""/>
@@ -47,10 +52,6 @@ function Skills(props) {
             <span className="skill__label">Java</span>
           </div>
           <div className="skill">
-            <img className="skill__icon" src="images/language-icons-svg/react.svg" alt=""/>
-            <span className="skill__label">React</span>
-          </div>
-          <div className="skill">
             <img className="skill__icon" src="images/language-icons-svg/jquery.svg" alt=""/>
             <span className="skill__label">jQuery</span>
           </div>
@@ -60,7 +61,6 @@ function Skills(props) {
           </div>
         </div>
       </div>
-      <div className="radargraph-holder" aria-hidden="true"></div>
     </section>
   );
 }

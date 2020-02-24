@@ -11,7 +11,7 @@ const WI2 = {
       <b>Projects</b>
       <ul>
         <li>
-          <a title="Go to UofT's Sports Hall of Fame" href="https://halloffame.utoronto.ca/">Sports Hall of Fame</a>
+          <a title="Go to UofT's Sports Hall of Fame" href="https://halloffame.utoronto.ca/" target="_blank" rel="noopener noreferrer">Sports Hall of Fame</a>
         </li>
         <li>
           internal scheduling tools

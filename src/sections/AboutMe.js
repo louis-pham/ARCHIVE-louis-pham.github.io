@@ -8,7 +8,7 @@ function AboutMe(props) {
       <img src="images/fightstick_active.svg" hidden alt="" />
       <div className="fightstick-holder" aria-hidden="true"></div>
       <p>
-        Born in Toronto, Canada, I graduated from the University of Toronto in 2017 with an Honours Bachelor of Science degree in <b>Computer Science</b> and <b>Astronomy & Astrophysics</b>. I'm currently taking the <b>Software Engineering Immersive</b> program at General Assembly.
+        Born in Toronto, Canada, I graduated from the University of Toronto in 2017 with an Honours Bachelor of Science degree in <b>Computer Science</b> and <b>Astronomy & Astrophysics</b>. I've also graduated from the <b>Software Engineering Immersive</b> program at General Assembly.
       </p>
       <p>
         I'm a full-stack developer who loves <b>creating</b>. I enjoy working on all sorts of projects to expand my knowledge, using my development skills together with a drive to learn new things, empathy towards user experience, and some creative muscle honed through art.
