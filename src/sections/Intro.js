@@ -8,7 +8,7 @@ function Intro(props) {
       <div className="intro__moon" aria-hidden="true"></div>
       <div className="intro__tag" aria-hidden="true"></div>
       <h1 className="intro__name animated"><span>Louis<br />Pham</span></h1>
-      <div className="intro__title animated"><b>Full-stack developer.</b> Space enthusiast. Breaker.</div>
+      <div className="intro__title animated"><b>Full-stack developer.</b> Space enthusiast. Artist.</div>
     </section>
   );
 }
